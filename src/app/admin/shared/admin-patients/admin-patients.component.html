@@ -1,0 +1,214 @@
+<section>
+    
+    <div class="container">
+        
+        <div class="row ">
+            
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2">
+                <h2>Add Patient </h2>
+                <hr>
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                    <div class="container">
+                      <div class="row mt-2">
+                        <div class="col-md-6">
+                          <label for="name">First Name</label>
+                          <input type="text"  placeholder="Enter first name here" class="form-control" formControlName="name">
+                          
+                        </div>
+                        <div class="col-md-6">
+                          <label for="middlename">Middle Name</label>
+                          <input type="text"  placeholder="Enter middle name here" class="form-control" formControlName="middlename">
+                          
+                        </div>
+                      </div>
+                  
+                      <div class="row mt-4">
+                        <div class="col-md-6">
+                          <label for="lastname">Last Name</label>
+                          <input type="text"  placeholder="Enter last name here" class="form-control" formControlName="lastname">
+                        
+                        </div>
+                        <div class="col-md-6">
+                          <label for="dateofBirth">Date of Birth</label>
+                          <input type="date"  placeholder="Enter date of birth here" class="form-control" formControlName="dateofBirth">
+                          
+                        </div>
+                      </div>
+                  
+                      <div class="row mt-4">
+                        <div class="col-md-6">
+                          <label for="gender">Gender</label>
+                          <input type="text" placeholder="Enter gender here" class="form-control" formControlName="gender">
+                        
+                        </div>
+                        <div class="col-md-6">
+                          <label for="ethnicity">Ethnicity</label>
+                          <input type="text"  placeholder="Enter ethnicity here" class="form-control" formControlName="ethnicity">
+                       
+                        </div>
+                      </div>
+                  
+                      <div class="row mt-4">
+                        <div class="col-md-6">
+                          <label for="addressOne">Address One</label>
+                          <input type="text"  placeholder="Enter address one here" class="form-control" formControlName="addressOne">
+                         
+                        </div>
+                        <div class="col-md-6">
+                          <label for="addressTwo">Address Two</label>
+                          <input type="text"  placeholder="Enter address two here" class="form-control" formControlName="addressTwo">
+                        
+                        </div>
+                      </div>
+                  
+                      <div class="row mt-4">
+                        <div class="col-md-6">
+                          <label for="city">City</label>
+                          <input type="text"  placeholder="Enter city here" class="form-control" formControlName="city">
+                         
+                        </div>
+                        <div class="col-md-6">
+                          <label for="state">State</label>
+                          <input type="text"  placeholder="Enter state here" class="form-control" formControlName="state">
+                         
+                        </div>
+                      </div>
+                  
+                      <div class="row mt-4">
+                        <div class="col-md-6">
+                          <label for="zip">Zip Code</label>
+                          <input type="text"  placeholder="Enter zip code here" class="form-control" formControlName="zip">
+                          
+                        </div>
+                        <div class="col-md-6">
+                          <label for="MRNnumber">MRN Number</label>
+                          <input type="text"  placeholder="Enter MRN number here" class="form-control" formControlName="MRNnumber">
+                          
+                        </div>
+                        
+                      </div>
+                  
+                      <div class="row mt-4">
+                       
+                        <div class="col-md-6">
+                          <label for="email">Email</label>
+                          <input type="email"  placeholder="Enter email here" class="form-control" formControlName="email">
+                         
+                        </div>
+                        <div class="col-md-6">
+                          <label for="password">Password</label>
+                          <textarea  placeholder="Enter password here" class="form-control" formControlName="password"></textarea>
+                          
+                        </div>
+                      </div>
+                  
+                      <div class="row mt-4">
+                        <div class="col-md-6">
+                          <label for="homePhone">Home Phone</label>
+                          <input type="tel"  placeholder="Enter home phone here" class="form-control" formControlName="homePhone">
+                         
+                        </div>
+                        <div class="col-md-6">
+                          <label for="mobilePhone">Mobile Phone</label>
+                          <input type="tel"  placeholder="Enter mobile phone here" class="form-control" formControlName="mobilePhone">
+                         
+                        </div>
+                      </div>
+                  
+                      <div class="row mt-4">
+                        <div class="col-md-6">
+                          <label for="otherPhone">Other Phone</label>
+                          <input type="tel"  placeholder="Enter other phone here" class="form-control" formControlName="otherPhone">
+                          
+                        </div>
+                        <div class="col-md-6">
+                          <label for="contactName">Contact Name</label>
+                          <input type="text"  placeholder="Enter contact name here" class="form-control" formControlName="contactName">
+                         
+                        </div>
+                      </div>
+                  
+                      <div class="row mt-4">
+                        <div class="col-md-6">
+                          <label for="phoneOne">Phone One</label>
+                          <input type="tel"  placeholder="Enter phone one here" class="form-control" formControlName="phoneOne">
+                         
+                        </div>
+                        <div class="col-md-6">
+                          <label for="phoneTwo">Phone Two</label>
+                          <input type="tel"  placeholder="Enter phone two here" class="form-control" formControlName="phoneTwo">
+                          
+                        </div>
+                      </div>
+                  
+                      <div class="row mt-4">
+                        <div class="col-md-6">
+                          <label for="emergencyEmail">Emergency Email</label>
+                          <input type="email" placeholder="Enter emergency email here" class="form-control" formControlName="emergencyEmail">
+                         
+                        </div>
+                        <div class="col-md-6">
+                          <label for="language">Language</label>
+                          <input type="text"  placeholder="Enter language here" class="form-control" formControlName="language">
+                         
+                        </div>
+                      </div>
+                  
+                      <div class="row mt-4">
+                          <!-- <div class="col-sm-6">
+                            <div class="form-group">
+                              <label for="">image <span>(Optional)</span></label>
+                              <input class="form-control" type="file" formControlName="image" class="form-control"
+                                (change)="Onupload($event)"
+                                [ngClass]="{'is-invalid': addDoctorform.controls['image'].errors && ckDep }">
+                              <p class="text-danger" *ngIf="addDoctorform.controls['mobileNumber'].errors && ckDep"> Enter your image</p>
+                            </div>
+                          </div> -->
+
+                        <div class="col-md-6">
+                          <label for="image">Image</label>
+                          <input (change)="Onupload($event)" type="file" id="image" placeholder="Enter image here" class="form-control" formControlName="image"  >
+                          <div *ngIf="myForm.get('image')?.touched && myForm.get('image')?.invalid">
+                            <small *ngIf="myForm.get('image')?.errors?.['required']" class="text-danger">image is required.</small>
+                          </div>
+                        </div>
+
+
+
+                        <div class="col-md-6">
+                          <label for="comments">Comments</label>
+                          <textarea placeholder="Enter comments here" class="form-control" formControlName="comments"></textarea>
+                         
+                        </div>
+                        <div class="col-md-6">
+                          <label for="instruction">Instruction</label>
+                          <input type="text" placeholder="Enter instruction here" class="form-control" formControlName="instruction">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="instruction">Covid 19 Tested</label>
+                          <select formControlName="Covid19Status" class="form-select" >
+                            <option value="" hidden>select</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                          </select>
+                        </div>
+                       
+                      </div>
+                  
+                      <div class="row mt-4">
+                        <div class="col-md-12 text-center">
+                          <button type="submit" class="btn btn-primary w-25">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  
+                  
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</section>

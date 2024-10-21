@@ -1,0 +1,151 @@
+.upload-container{
+    margin: 50px auto;
+}
+
+
+.upload-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.custom-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #495057;
+}
+
+.input-file {
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+    padding: 0.4rem 1rem;
+    transition: all 0.3s;
+}
+
+.input-file:hover,
+.input-date:hover {
+    border-color: #a9d2ff;
+}
+
+.input-date {
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+    padding: 0.4rem;
+}
+
+.btn-upload {
+    background-color: #007bff;
+    color: white;
+    padding: 0.45rem 1.25rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-upload:hover {
+    background-color: #0056b3;
+}
+
+.custom-table th, 
+.custom-table td {
+    vertical-align: middle;
+    font-size: 0.95rem;
+}
+
+.btn-action {
+    width: 90px;
+}
+
+.btn-download {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-rename {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn:hover{
+background-color: green;
+color: white;
+}
+.expires-date {
+    color: red;
+    font-weight: 600;
+  
+}
+
+
+
+.adl-container {
+    margin: 30px auto;
+    max-width: 1000px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.adl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.adl-header h5 {
+    font-weight: bold;
+    color: #4a4a4a;
+}
+.adl-table th, .adl-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+.adl-table th {
+    background-color: #f1f3f5;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.no-adl {
+    text-align: center;
+    padding: 80px 0;
+}
+.no-adl p {
+    font-size: 18px;
+    color: #6c757d;
+}
+.check-icon {
+    font-size: 50px;
+    color: #4a4a4a;
+}
+.dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.dropdown-item input {
+    margin-right: 10px;
+}
+.search-box {
+    position: relative;
+}
+.search-box input {
+    padding-left: 30px;
+    border-radius: 4px;
+    width: 100%;
+}
+.search-box i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #6c757d;
+}
+/* Add ADL Modal */
+.modal-content {
+    padding: 20px;
+}
+.modal-title {
+    font-weight: bold;
+    color: #333;
+}

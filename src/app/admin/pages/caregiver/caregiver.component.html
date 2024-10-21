@@ -1,0 +1,491 @@
+<div class="col-md-12 col-sm-12  mt-3" style="width: 100%;">
+    <div class="page-title">Care Giver <span class="sub-title ms-2"> <i
+                class="fa-duotone fa-solid fa-arrows-turn-right"></i>Care Giver Search</span></div>
+    <div class="col-lg-12 col-md-12 d-flex  gap-2  mt-2 "
+        style="background-color: #F7F7F7; white-space: wrap ; height: 70px;">
+        <h5 class="fs-4 mt-3 text-center p-2" style="color: #777 ;">Care Giver</h5> <span><button type="button"
+                class="btn text-white mt-3" style="background-color: #4F99C6;"  (click)="caregiver()"><span><i
+                        class="fa-sharp fa-solid fa-plus"></i></span> Add</button></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-12 mt-3">
+            <form class="form-inline mb-3" style="display: flex;">
+                <label for="search" class="me-2 fw-bold ">Search:</label>
+                <input type="text" class="form-control mr-2  form-control-sm" id="search" placeholder="Search">
+                <button type="button" class="btn btn-filter"><i class="fas fa-filter"></i></button>
+            </form>
+        </div>
+        <div class="col-md-6 col-12">
+            <div class="form-inline mb-3 float-md-end mt-2" style="display: flex; ">
+                <label for="entries" class="me-2 fw-bold">Show</label>
+                <select id="entries" class="form-control mr-2" style="width: auto; border-color: #FFA500;">
+                    <option value="10">10</option>
+                    <option value="25" selected>25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                <label for="entries fw-bold">entries</label>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="" style="overflow-x: scroll;">
+        <table class="table table-bordered table-hover table-striped ">
+            <thead class="" style="font-size: 13px; text-wrap: nowrap; ">
+                <tr>
+                    <th style="color: #4F99C6;">ID</th>
+                    <th style="color: #4F99C6;">NAME</th>
+                    <th style="color: #4F99C6;">STATUS</th>
+                    <th style="color: #4F99C6;">EXT. STATUS</th>
+                    <th style="color: #4F99C6;">ADMINISTRATOR</th>
+                    <th style="color: #4F99C6;">GENDER</th>
+                    <th style="color: #4F99C6;">CLASS</th>
+                    <th style="color: #4F99C6;">RESP.PARTY</th>
+                    <th style="color: #4F99C6;">PHONE</th>
+                    <th style="color: #4F99C6;">EMAIL</th>
+                    <th style="color: #4F99C6;">LOCATION</th>
+                    <th style="color: #4F99C6;">COMMUNITY</th>
+                    <th style="color: #4F99C6;">ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody style="text-wrap: nowrap;" class="">
+                <tr style="    background-color: #f9f9f9;">
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a> </td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a href="#" style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a href="#" style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a href="#" style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a href="#" style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+
+                </tr>
+
+
+
+                <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr> <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center"><a  style="text-decoration: none;">Dunn,Doris</a></td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Active</td>
+                    <td class="text-center">Osmel Villarreal</td>
+                    <td class="text-center">Female</td>
+                    <td class="text-center">Medicaid</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center">name0213@gamil.com</td>
+                    <td class="text-center">236-587-2629</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><span><i class="fa-solid fa-user text-primary"
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>
+                        <span><i class="fa-regular fa-calendar-days text-primary "
+                                style="padding-right: 10px;"></i></span> <span><i
+                                class="fa-sharp fa-solid fa-envelope text-primary"
+                                style="padding-right: 10px;"></i></span> </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="row mt-3">
+
+        <div class="col-sm-12 col-md-6 d-flex justify-content-start mt-2">
+            <p>Showing 0 to 0 of 0 entries</p>
+        </div>
+        <div class="col-sm-12 col-md-6 d-flex justify-content-end">
+            <ul class="pagination gap-2  ">
+                <li class="page-item"><a class="page-link" href="#">First</a></li>
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                <li class="page-item"><a class="page-link" href="#">Last</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+</div>

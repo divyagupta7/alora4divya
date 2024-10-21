@@ -1,0 +1,135 @@
+
+
+<section>
+    
+    <div class="container">
+        
+        <div class="row mt-3 ">
+            <h2 style="background-color: #438eb9; color: white;">My Care Giver Details</h2>
+            <hr>
+            
+        
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2">
+                
+                <div class="table-responsive">
+                    <table class="table table-hover" style="text-wrap: nowrap;">
+                      <thead>
+                        <tr>
+                          <th>Sr No</th>
+                          <th>Nurse Name</th>
+                          <th>From Date</th>
+                          <th>To Date</th>
+                          <th>Nursing Service Charge</th>
+                          <th>Medication Charge</th>
+                          <th>Additional Service</th>
+                          <th>Additional Service Charge</th>
+                          <th>Total Charge</th>
+                          <th>Invoice</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let admin of rehan; let i = index">
+                          <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+                          <td>{{ admin.nurseName }}</td>
+                          <td>{{ admin.formDate }}</td>
+                          <td>{{ admin.toDate }}</td>
+                          <td>{{ admin.nursingServiceCharge }}</td>
+                          <td>{{ admin.medicationCharge }}</td>
+                          <td>{{ admin.additionalService }}</td>
+                          <td>{{ admin.additionalServiceCharge }}</td>
+                          <td>{{ admin.totalCharge }}</td>
+                          <td>
+<!-- Modal Trigger Button (opens modal) -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#invoiceModal" (click)="setAdminData(admin)">
+  View Invoice
+</button>
+
+<!-- Modal Structure -->
+<div class="modal fade" id="invoiceModal" tabindex="-1" aria-labelledby="invoiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="invoiceModalLabel">Billing Invoice</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <div class="invoice">
+          <h2>Invoice</h2>
+
+          <!-- Patient Details -->
+          <div class="patient-details">
+            <p><strong>Patient Name:</strong> {{ admin?.patientName }}</p>
+            <p><strong>Date:</strong> {{ currentDate }}</p>
+          </div>
+
+          <!-- Table for Charges -->
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Sr No</th>
+                  <th>Nurse Name</th>
+                  <th>From Date</th>
+                  <th>To Date</th>
+                  <th>Nursing Service Charge</th>
+                  <th>Medication Charge</th>
+                  <th>Additional Service</th>
+                  <th>Additional Service Charge</th>
+                  <th>Total Charge</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let admin of rehan; let i = index">
+                  <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+                  <td>{{ admin.nurseName }}</td>
+                  <td>{{ admin.formDate }}</td>
+                  <td>{{ admin.toDate }}</td>
+                  <td>{{ admin.nursingServiceCharge | currency }}</td>
+                  <td>{{ admin.medicationCharge | currency }}</td>
+                  <td>{{ admin.additionalService }}</td>
+                  <td>{{ admin.additionalServiceCharge | currency }}</td>
+                  <td>{{ admin.totalCharge | currency }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Total Section -->
+          <div class="total-section">
+            <p><strong>Total Amount:</strong> {{ calculateTotalAmount() | currency }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="downloadPDF()">Download PDF</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+                          </td>
+                        </tr>
+                  
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div class="pagination-controls">
+                    <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+                    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+                    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+                  </div>
+                  
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</section> 

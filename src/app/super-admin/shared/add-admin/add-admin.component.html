@@ -1,0 +1,132 @@
+<section>
+
+  <div class="container"  >
+
+
+ 
+
+    <div class="row">
+  
+      <div  class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2">
+        <h2>Add Admin </h2>
+        <hr>
+       
+        <form [formGroup]="addDoctorform">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="name" class="form-label">First
+                    Name</label>
+                  <input type="text" id="name" formControlName="name" class="form-control"
+                    [ngClass]="{'is-invalid': addDoctorform.controls['name'].errors && ckDep }"
+                    placeholder="First Name" />
+                  <p class="text-danger" *ngIf="addDoctorform.controls['name'].errors && ckDep"> Enter your name
+                  </p>
+
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="middleName" class="form-label">Email</label>
+                  <input type="text" id="middleName" class="form-control" placeholder="email " formControlName="email"
+                    class="form-control" [ngClass]="{'is-invalid': addDoctorform.controls['email'].errors && ckDep }" />
+                  <p class="text-danger" *ngIf="addDoctorform.controls['password'].errors && ckDep"> Enter your email
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="lastName" class="form-label">Password
+                  </label>
+                  <input type="text" id="lastName" class="form-control" placeholder="Password "
+                    formControlName="password" class="form-control"
+                    [ngClass]="{'is-invalid': addDoctorform.controls['password'].errors && ckDep }" />
+                  <p class="text-danger" *ngIf="addDoctorform.controls['password'].errors && ckDep"> Enter your password
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="disabledTextInput" class="form-label">Mobile Number</label>
+ 
+                  <input type="tel" id="disabledTextInput" formControlName="mobileNumber" placeholder="Mobile Number"
+                    formControlName="mobileNumber" class="form-control"
+                    [ngClass]="{'is-invalid': addDoctorform.controls['mobileNumber'].errors && ckDep }" />
+                  <p class="text-danger" *ngIf="addDoctorform.controls['mobileNumber'].errors && ckDep"> Enter your
+                    Mobile Number</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="fullAddress" class="form-label">Full Address</label>
+                  <input type="text" id="expreience" class="form-control" placeholder="Full Address"
+                    formControlName="fullAddress" class="form-control"
+                    [ngClass]="{'is-invalid': addDoctorform.controls['fullAddress'].errors && ckDep }" />
+                    <p class="text-danger" *ngIf="addDoctorform.controls['fullAddress'].errors && ckDep">Enter your Full Address</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="">Image</label>
+                  <input class="form-control" type="file" formControlName="image" class="form-control"
+                    (change)="Onupload($event)"
+                    [ngClass]="{'is-invalid': addDoctorform.controls['image'].errors && ckDep }">
+                  <p class="text-danger" *ngIf="addDoctorform.controls['mobileNumber'].errors && ckDep"> Enter your
+                    Image</p>
+
+                </div>
+              </div>
+
+            </div>
+          
+            <div class="row">
+           
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="">License </label>
+                  <input class="form-control" type="file" formControlName="license" (change)="Onuploadquali($event)"
+                    class="form-control" [ngClass]="{'is-invalid': addDoctorform.controls['license'].errors && ckDep }">
+                  <p class="text-danger" *ngIf="addDoctorform.controls['license'].errors && ckDep"> Enter License</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  
+                  <label for="">Form Date </label>
+                  <input class="form-control" type="date" formControlName="formDate" (change)="Onuploadquali($event)"
+                    class="form-control" [ngClass]="{'is-invalid': addDoctorform.controls['formDate'].errors && ckDep }">
+                  <p class="text-danger" *ngIf="addDoctorform.controls['formDate'].errors && ckDep"> Enter License</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="">To Date </label>
+                  <input class="form-control" type="date" formControlName="toDate" (change)="Onuploadquali($event)"
+                    class="form-control" [ngClass]="{'is-invalid': addDoctorform.controls['toDate'].errors && ckDep }">
+                  <p class="text-danger" *ngIf="addDoctorform.controls['toDate'].errors && ckDep"> Enter License</p>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="form-login" >
+                <button class="btn btn-login   btn-primary" style="width: 100px;" type="submit" (click)="addDoctor()">
+                  Save
+                </button>
+                <button class="btn btn-login   btn-danger mx-1" style="width: 100px;" type="cancel" (click)="Cancel()">
+                Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
