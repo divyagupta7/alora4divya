@@ -19,3 +19,15 @@
     background-color: #17a2b8 !important;  /* Blue background for info */
     color: white;
   }
+
+
+  .col-md-9 {
+    flex: 0 0 auto;
+    width: 82% !important;
+}
+@media (max-width: 767px) {
+  .col-md-9 {
+    flex: 0 0 auto;
+    width: 100% !important;
+}
+}
