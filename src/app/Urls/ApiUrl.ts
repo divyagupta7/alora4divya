@@ -1,5 +1,5 @@
 // const baseUrl = 'https://alora-yst7j.ondigitalocean.app/api/v1/';
-const baseUrl = 'https://alora-plus.vercel.app/api/v1/';
+const baseUrl = 'https://alora-four.vercel.app/api/v1/';
 const adminId = localStorage.getItem('id')
 console.log('url id for all',adminId)
 
@@ -35,4 +35,6 @@ export const superAdminEndPoints = {
     addtionalserviceGet: `${baseUrl}servicetitles`,
     approveDoctor: `${baseUrl}doctor/accountStatusUpdate/`,
     getCovidcSreening: `${baseUrl}doctor/accountStatusUpdate`,
+
+    addleads: `${baseUrl}lead`,
 }

@@ -1638,20 +1638,23 @@ input.mail_bt::placeholder {
 }
 
 #custom-item1 {
-    background: url("https://i.ibb.co/QK7m51x/4c1ee981-ba49-497a-81a3-97b679fd61b1.jpg") center center no-repeat;
+    background: url("https://i.ibb.co/WxmvLCm/image.png") center center no-repeat;
     background-size: cover;
 }
 
 #custom-item2 {
-    background: url("https://i.ibb.co/qk1KTQZ/5f8d9f80-b2cf-4f51-9a8c-b768f135793c.jpg") center center no-repeat;
+    background: url("https://i.ibb.co/hfP80Tf/image.png") center center no-repeat;
     background-size: cover;
 }
 
 #custom-item3 {
-    background: url("https://i.ibb.co/wWLXzvY/fa00ac56-99c2-47a7-94d4-19ccf9d302b0.jpg") center center no-repeat;
+    background: url("https://i.ibb.co/RPF7ct4/image.png") center center no-repeat;
     background-size: cover;
 }
-
+#custom-item4 {
+    background: url("https://i.ibb.co/RPF7ct4/image.png") center center no-repeat;
+    background-size: cover;
+}
 .custom-color:hover {
     opacity: 1 !important;
 }

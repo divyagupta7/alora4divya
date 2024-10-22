@@ -55,6 +55,7 @@ import { CaregiverComponent } from './pages/caregiver/caregiver.component';
 import { ClientprofileComponent } from './pages/clientprofile/clientprofile.component';
 import { AddclientComponent } from './shared/addclient/addclient.component';
 import { AddcaregiverComponent } from './shared/addcaregiver/addcaregiver.component';
+import { LeadlistComponent } from './pages/leadlist/leadlist.component';
 
 const routes: Routes = [
   { path: '', component: AdminComponent,
@@ -280,6 +281,10 @@ const routes: Routes = [
       {
         path:'Addcaregiver',
         component:AddcaregiverComponent
+      },
+      {
+        path:'Leadlist',
+        component:LeadlistComponent
       }
     
     

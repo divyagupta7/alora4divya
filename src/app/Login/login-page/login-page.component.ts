@@ -56,14 +56,16 @@ export class LoginPageComponent implements OnInit {
   }
 
   handleRoleBasedRedirection(res: any) {
+    // if (res.role === 'superadmin') {
+    //   localStorage.setItem('Superadmin_token', res.token);
+    //   localStorage.setItem('superadmin_name', res.name);
+    //   this.router.navigate(["/superAdmin/home"]);
+    // } else
+    
     if (res.role === 'superadmin') {
       localStorage.setItem('Superadmin_token', res.token);
-      localStorage.setItem('superadmin_name', res.name);
-      this.router.navigate(["/superAdmin/home"]);
-    } else if (res.role === 'doctor') {
-      localStorage.setItem('homecare_token', res.token);
       localStorage.setItem('id', res.id);
-      localStorage.setItem('homecare_name', res.name);
+      localStorage.setItem('superadmin_name', res.name);
       this.router.navigate(["/Admin/admin_dashboard"]);
     } else if (res.role === 'nurse') {
       localStorage.setItem('nurse_token', res.token);
@@ -79,12 +81,14 @@ export class LoginPageComponent implements OnInit {
   }
 
   onChanges(data: string) {
+    // if (data === 'superadmin') {
+    //   this.loginForm.controls['email'].setValue('superadmin@gmail.com');
+    //   this.loginForm.controls['password'].setValue('superadmin');
+    // } else
+    
     if (data === 'superadmin') {
-      this.loginForm.controls['email'].setValue('superadmin@gmail.com');
-      this.loginForm.controls['password'].setValue('superadmin');
-    } else if (data === 'doctor') {
-      this.loginForm.controls['email'].setValue('mayank@gmail.com');
-      this.loginForm.controls['password'].setValue('mayank@123');
+      this.loginForm.controls['email'].setValue('osmelvillarreal@gmail.com');
+      this.loginForm.controls['password'].setValue('osmelvillarreal');
     }
     else if (data === 'nurse') {
       // this.form.controls['mobileNumber'].setValue('+919644605330');

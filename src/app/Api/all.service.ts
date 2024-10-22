@@ -254,4 +254,8 @@ postDoctors(data: any) {
   // }
 
 
+  addlead(data:any){
+    return this.post(superAdminEndPoints.addleads, data)
+   }
+
 }

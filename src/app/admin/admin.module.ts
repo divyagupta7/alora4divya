@@ -58,6 +58,7 @@ import { CaregiverComponent } from './pages/caregiver/caregiver.component';
 import { ClientprofileComponent } from './pages/clientprofile/clientprofile.component';
 import { AddclientComponent } from './shared/addclient/addclient.component';
 import { AddcaregiverComponent } from './shared/addcaregiver/addcaregiver.component';
+import { LeadlistComponent } from './pages/leadlist/leadlist.component';
 
 
 @NgModule({
@@ -116,7 +117,8 @@ import { AddcaregiverComponent } from './shared/addcaregiver/addcaregiver.compon
     CaregiverComponent,
     ClientprofileComponent,
     AddclientComponent,
-    AddcaregiverComponent
+    AddcaregiverComponent,
+    LeadlistComponent
   ],
   imports: [
     CommonModule,

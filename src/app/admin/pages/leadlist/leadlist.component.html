@@ -1,0 +1,196 @@
+<p>leadlist works!</p>
+
+
+<div class="container-fluid  mt-3">
+    <div class="page-title">Lead<span class="sub-title ms-2"> <i
+          class="fa-duotone fa-solid fa-arrows-turn-right"></i>Lead Search</span></div>
+    <div class="col-lg-12 col-md-12 d-flex  gap-2  mt-2 "
+      style="background-color: #F7F7F7; white-space: wrap ; height: 70px;">
+      <h5 class="fs-4 mt-3 text-center p-2" style="color: #777 ;">Lead</h5>
+       <!-- <span><button type="button"
+          class="btn text-white mt-3" style="background-color: #4F99C6;"  [routerLink]="['/Admin/add_patients']"><span><i
+              class="fa-sharp fa-solid fa-plus"></i></span> Add</button></span> -->
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6 col-12 mt-3">
+        <form class="form-inline mb-3" style="display: flex;">
+          <label for="search" class="me-2 fw-bold ">Search:</label>
+          <input type="text" class="form-control mr-2  form-control-sm" id="search" placeholder="Search">
+          <button type="button" class="btn btn-filter"><i class="fas fa-filter"></i></button>
+        </form>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="form-inline mb-3 float-md-end mt-2" style="display: flex; ">
+          <label for="entries" class="me-2 fw-bold">Show</label>
+          <select id="entries" class="form-control mr-2" style="width: auto; border-color: #FFA500;">
+            <option value="10">10</option>
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+          <label for="entries fw-bold">entries</label>
+        </div>
+      </div>
+  
+  
+    </div>
+  
+    <div class="" style="overflow-x: scroll;">
+      <table class="table table-bordered table-hover table-striped ">
+        <thead class="" style="font-size: 13px; text-wrap: nowrap; ">
+  
+          <tr>
+            <th style="color: #4F99C6;">Sr No</th>
+            <th style="color: #4F99C6;">Lead Name</th>
+            <th style="color: #4F99C6;">Email </th>
+            <th style="color: #4F99C6;">Services Type</th>
+            <th style="color: #4F99C6;">Note </th>
+          </tr>
+        </thead>
+        <tbody style="text-wrap: nowrap;" class="">
+  
+  
+          <tr *ngFor="let admin of paginatedDoctors; let i = index">
+            <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+        
+            <td>{{ admin.firstname }}</td>
+            <td>{{ admin.middlename }}</td>
+            <td>{{ admin.lastname }}</td>
+            <td>{{ admin.dateofBirth }}</td>
+            <td>{{ admin.gender }}</td>
+            <td>{{ admin.city }}</td>
+            <td>{{ admin.email }}</td>
+            <td>
+              <button (click)="patientById(admin.id)" class="btn btn-primary bg-transparent m-1" style="color: #438eb9;"
+                data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pen-to-square"></i></button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Patient</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form #userForm="ngForm" (ngSubmit)="updatePatient()">
+  
+                        <div class="container mt-2 mb-3">
+  
+  
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <label for="name">First Name:</label>
+                              <input type="text" class="form-control" id="name" [(ngModel)]="patientByIdData.name"
+                                name="name" required />
+                            </div>
+  
+                            <div class="col-lg-6">
+                              <label for="middlename">Middle Name:</label>
+                              <input type="text" class="form-control" id="middlename"
+                                [(ngModel)]="patientByIdData.middlename" name="middlename" required />
+                            </div>
+                          </div>
+  
+  
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <label for="lastname">Last Name:</label>
+                              <input type="text" class="form-control" id="lastname" [(ngModel)]="patientByIdData.lastname"
+                                name="lastname" required />
+                            </div>
+  
+                            <div class="col-lg-6">
+                              <label for="dateofBirth">Date of Birth:</label>
+                              <input type="date" class="form-control" id="dateofBirth"
+                                [(ngModel)]="patientByIdData.dateofBirth" name="dateofBirth" required />
+                            </div>
+                          </div>
+  
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <label for="gender">Gender:</label>
+                              <input type="text" class="form-control" id="gender" [(ngModel)]="patientByIdData.gender"
+                                name="gender" required />
+                            </div>
+  
+                            <div class="col-lg-6">
+                              <label for="city">City:</label>
+                              <input type="text" class="form-control" id="city" [(ngModel)]="patientByIdData.city"
+                                name="city" required />
+                            </div>
+                          </div>
+  
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <label for="email">Email:</label>
+                              <input type="text" class="form-control" id="email" [(ngModel)]="patientByIdData.email"
+                                name="email" required />
+                            </div>
+                          </div>
+  
+  
+                        </div>
+  
+  
+  
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+  
+  
+                      </form>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button (click)="patientById(admin.id)" class="btn btn-danger bg-transparent m-1" style="color: red;"
+                data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa-solid fa-trash"></i></button>
+              <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+  
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Patient</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Are you sure want to delete {{ patientByIdData.name }} ?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button class="btn-close" data-bs-dismiss="modal" aria-label="Close" type="submit"
+                        (click)="patientDelete(patientByIdData)" class="btn btn-primary">Save
+                        changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+  
+        </tbody>
+      </table>
+    </div>
+    <div class="row mt-3">
+  
+      <div class="col-sm-12 col-md-6 d-flex justify-content-start mt-2">
+        <p>Showing 1 to 2 of 2 entries</p>
+      </div>
+      <div class="col-sm-12 col-md-6 d-flex justify-content-end">
+        <ul class="pagination gap-2  ">
+          <li class="page-item"><a class="page-link" >First</a></li>
+          <li class="page-item"><a class="page-link" >Previous</a></li>
+          <li class="page-item"><a class="page-link" >Next</a></li>
+          <li class="page-item"><a class="page-link" >Last</a></li>
+        </ul>
+  
+      </div>
+  
+    </div>
+  
+  
+  </div>
