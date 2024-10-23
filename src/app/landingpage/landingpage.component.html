@@ -1,263 +1,420 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-   <!-- basic -->
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- mobile metas -->
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-   <!-- site metas -->
-   <title>HomeHealth</title>
-   <meta name="keywords" content="">
-   <meta name="description" content="">
-   <meta name="author" content="">
-
-   <!-- <link rel="stylesheet" type="text/css" href="./landing.css">
-      <link rel="stylesheet" href="./Responcive.css">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/responsive.css">
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Poppins:400,700&display=swap" rel="stylesheet">
-      -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apexcare360</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://kit.fontawesome.com/7d08567bd4.css" crossorigin="anonymous">
 </head>
 
 <body>
-   <!-- header top section start -->
-   <div class="header_top_section">
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-12">
-               <div class="header_top_main">
-                  <div class="call_text"><a href="#"><span class="padding_right0"><i class="fa fa-phone"
-                              aria-hidden="true"></i></span> Call : +01 1234567890</a></div>
-                  <div class="call_text_2"><a href="#"><span class="padding_right0"><i class="fa fa-envelope"
-                              aria-hidden="true"></i></span> demo@gmail.com</a></div>
-                  <div class="call_text_1"><a href="#"><span class="padding_right0"><i class="fa fa-map-marker"
-                              aria-hidden="true"></i></span> Location</a></div>
-               </div>
-            </div>
-         </div>
+    <!-- topbar start -->
+      <div class="row text-center p-2" style="background-color: #2176CB; color: white;">
+    <div class="col-md-4">
+     <h6><i class="fa-solid fa-phone" style="color: #F79707;"></i> : +01 1234567890</h6>
+    </div>
+    <div class="col-md-4">
+        <h6><i class="fa-solid fa-envelope" style="color: #F79707;"></i> : demo@gmail.com</h6>
+    </div>
+    <div class="col-md-4">
+        <h6><i class="fa-sharp fa-solid fa-location-dot" style="color: #F79707;"></i> : Location</h6>
+    </div>
       </div>
-   </div>
-   <!-- header top section end -->
-   <!-- header section start -->
-   <div class="header_section">
-      <div class="container">
-         <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-               <a class="navbar-brand" style="text-align: start;" href="#">
-                  <img style="width: 100px;"
-                     src="https://i.ibb.co/PzM8pYF/74-EB1-EE2-13-F5-4-D86-99-AE-A798-B5-CDABB1.png" alt="">
-               </a>
+     <!-- topbar end -->
 
-               <div class=" navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                  </ul>
-                  <form class="d-flex" role="search">
+    <!-- navbar start -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- Brand Logo/Name -->
+      <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" style="height: 70px;"></a>
+  
+      <!-- Hamburger Menu Button for Mobile View -->
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+  
+      <!-- Navbar Links -->
+      <!-- <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div> -->
 
-                     <button class="btn btn fw-bold "
-                        style="width: 150px; height: 40px; background-color: #5090C1; color: white;" type="submit"
-                        routerLink="/mainLogin">Login</button>
-                  </form>
-               </div>
-            </div>
-         </nav>
+      <!-- <div class="text-center">
+        <a href="#" class="btn_uniqe">Login</a>
+      </div> -->
+      <div class="text-center">
+         <button class="btn btn fw-bold "style="width: 150px; height: 40px; background-color: #2176CB; color: white;" type="submit"routerLink="/mainLogin">Login</button>
+        <!-- <button type="button" class="btn" style="background-color: #2176CB; color: white;">Login</button> -->
+    </div>
+    </div>
+     </nav>
+   <!-- navbar end -->
 
-      </div>
-      <!-- header section end -->
-      <!-- banner section start -->
-      <div class="banner_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
 
-                  <h1 class="banner_taital">Home Care Services</h1>
-                  <p class="banner_text fs-4">Focusing on Personal Care Home ... ! </p>
-                  <div class="read_bt"><a href="#">Read More</a></div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- banner section end -->
-   </div>
-   <!-- header section end -->
-   <!-- appointment section start -->
-   <div class="appointment_section">
-      <div class="container">
-         <div class="appointment_box">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1 class="appointment_taital">Lead <span style="color: #5090C1;">Generate</span></h1>
-               </div>
-            </div>         
-            <div class="appointment_section_2">
-               <form [formGroup]="leadform">
-                  <div class="row">
-                     <div class="col-md-6">
-                        <p class="doctorname_text">Name</p>
-                        <input type="text" class="email_text" placeholder="" formControlName="name" name="">
-                     </div>
-                     <div class="col-md-6">
-                        <p class="doctorname_text">Email</p>
-                        <input type="text" class="email_text" placeholder="" formControlName="email" name="">
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-md-6">
-                        <form>
-                           <div class="form-group">
-                              <p class="doctorname_text">Services Type</p>
-                              <select class="form-control" id="" formControlName="servicetype">
-                                 <option>Choose...</option>
-                                 <option>CareGiver</option>
-                                 <option>Client</option>
-                              </select>
-                           </div>
-                        </form>
-                     </div>
-                     <div class="col-md-6">
-                        <form>
-                           <div class="form-group">
-                              <p class="doctorname_text">Note</p>
-                              <input type="text" class="email_text" placeholder="" formControlName="note" name="">
-                             
-                           </div>
-                        </form>
-                     </div>
-                     <div class="read_bt col-sm-2"><a (click)="onSubmit()">Generate</a></div>
-                  </div>
-               </form>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- appointment section end -->
-   <!-- about section start -->
-   <div class="about_section layout_padding" id="about">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-6">
-               <h1 class="about_taital">About ApexCare360</h1>
-               <p class="about_text"> Comprehensive Patient Lifecycle Management Manage every touchpoint from
-                  appointments and billing to diagnoses and treatment
-                  plans, all within one seamlessly integrated platform.Automate tasks, streamline workflows, and gain
-                  actionable insights with advanced
-                  reporting and analytics.</p>
-               <div class="about_bt"><a href="#">Read More</a></div>
+    <!-- section-1 start -->
+    <div class="container-fluid demo-section text-center h-100" style="padding: 50px 0; background-color: #003366; color: white;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <h2 style="font-weight: bold;">We assist home care agencies in providing optimal care.</h2>
+                <p class="text-start">To find out how we can assist you in achieving operational excellence, speak with a CareSmartz360 specialist.</p>
+                <ul class="text-start">
+                    <li><strong>Increase ROI -</strong> CareSmartz360 helps agencies make 35% more money.</li>
+                    <li><strong>Be Profitable-</strong> Be Profitable: Make the most of your resources and increase profits by 50%.</li>
+                    <li><strong>Stay Compliant-</strong> We take care of your EVV, HIPAA, and Medicaid compliance.</li>
+                </ul>
+                <img src="https://cdn-ikpmepd.nitrocdn.com/bZEsIxCYpMlulSPiWCaWfdLzdYuZsrCW/assets/images/optimized/rev-26d0350/www.caresmartz360.com/wp-content/themes/caresmartz/images/Demo-Image1.png"
+                    alt="CareSmartz360 Screen" class=" w-50" style="width: 60%;  ">
+                <!-- <div class="testimonial" style="   font-style: italic; font-size: 14px;   color: #ccc;  margin-top: 20px;">
+                    “CareSmartz360 boosted our efficiency with streamlined scheduling, real-time access, and time &
+                    attendance tracking. It saved us on staffing and paper costs!”<br>
+                    <strong>Heather Attilio, Sterling Care Assisted Living</strong>
+                </div> -->
             </div>
             <div class="col-md-6">
-               <div class="about_img"><img src="https://themewagon.github.io/MedWin/images/about-img.png"></div>
+              
+                <div class="form-section" style="    background-color: #fff; border-radius: 8px;  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);  padding: 30px;">
+                  <h1 class="text-black">Lead Generate</h1>
+                    <!-- <h3>Book a demo <span class="badge" style=" background-color: #ffcc00;  color: #003366;  font-weight: bold; padding: 5px 10px; border-radius: 5px; margin-left: 10px;">50% OFF</span></h3> -->
+                    <p>Sign up today & get CareSmartz360 at 50% Off for the rest of 2024!</p>
+
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <input type="text" class="form-control" placeholder="Name*" formControlName="  " required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <input type="email" class="form-control" placeholder="Email*" formControlName="  " >
+                        </div>
+                       
+                        <div class="col-md-12  mb-3">
+                            <select class="form-control">
+                                <option>Service Type</option>
+                                <option>Caregiver</option>
+                                <option>Client</option>
+                                <!-- Add options for states/regions here -->
+                            </select>
+                        </div>
+                       
+                        <div class="col-sm-12 mb-3">
+                          <input type="text" class="form-control" placeholder="Note" formControlName="  " required>
+                      </div>
+                       
+                          <div class="col-md-12 text-start ">
+                              <button type="button" class="btn" style="background-color: #003366; color: white;">Submit</button>
+                          </div>
+                </div>
             </div>
-         </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- section-1 end -->
+
+
+    <!-- section-2 start -->
+    <div class="mt-5">
+     <h1 class="text-center">1 Home care management software</h1>
+     <p class="text-center">CareSmartz360 enables franchises, facilities, and home care companies to succeed.</p>
+      <div class="container py-3">
+  <div class="row">
+    <!-- Card 1: Home Care -->
+    <div class="col-md-4 mt-3">
+      <div class="card shadow-sm card_uniqe">
+        <div class="card-body">
+          <div class="text-center mb-3">
+            <i class="fas fa-home card-icon"  style="font-size:2rem; color: #2176CB;"></i>
+          </div>
+          <h5 class="card-title text-center">Home Care</h5>
+          <p class="card-text text-center">CareSmartz360 streamlines processes, improves services, and aids in the expansion of your home care business.</p>
+          <hr>
+          <ul style="list-style: none; line-height: 2rem;">
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Smart billing and EVV</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Custom reporting and scheduling</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Evaluation of the client and care plan</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> sophisticated mobile portals and apps</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Training for caregivers</li>
+          </ul>
+          <div class="text-center">
+            <a href="#" class="btn_uniqe">Learn More</a>
+          </div>
+        </div>
       </div>
-   </div>
-   <!-- about section end -->
-   <!-- treatment section start -->
-   <div class="treatment_section layout_padding">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <h1 class="treatment_taital">Our Treatment</h1>
-            </div>
-         </div>
-         <div class="treatment_section_2">
-            <div class="row">
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="number_text">01</h1>
-                  <h2 class="care_text">Nephrologist Care</h2>
-                  <p class="treatment_text">alteration in some form, by injected humour, or randomised words which don't
-                     look even slightly e sure there isn't anything</p>
-                  <div class="readmore_bt active"><a href="#">Read More</a></div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="number_text">02</h1>
-                  <h2 class="care_text">Eye Care</h2>
-                  <p class="treatment_text_1">alteration in some form, by injected humour, or randomised words which
-                     don't look even </p>
-                  <div class="readmore_bt"><a href="#">Read More</a></div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="number_text">03</h1>
-                  <h2 class="care_text">Pediatrician Clinic</h2>
-                  <p class="treatment_text_1">alteration in some form, by injected humour, or randomised words which
-                     don't look even</p>
-                  <div class="readmore_bt"><a href="#">Read More</a></div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="number_text">04</h1>
-                  <h2 class="care_text">Prenatal Care</h2>
-                  <p class="treatment_text_1">alteration in some form, by injected humour, or randomised words which
-                     don't look even</p>
-                  <div class="readmore_bt"><a href="#">Read More</a></div>
-               </div>
-            </div>
-         </div>
+    </div>
+
+    <!-- Card 2: Franchisor Management -->
+    <div class="col-md-4 mt-3">
+      <div class="card shadow-sm card_uniqe">
+        <div class="card-body">
+          <div class="text-center mb-3">
+            <i class="fas fa-sitemap card-icon" style="font-size:2rem; color: #2176CB;"></i>
+          </div>
+          <h5 class="card-title text-center">Franchisor Management</h5>
+          <p class="card-text text-center">Make that all of your franchise locations have consistent operations, safe data sharing, and <br>support.</p>
+          <hr>
+          <ul style="list-style: none; line-height: 2rem;">
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Development of franchises</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Management of many locations</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Support and migration for franchises</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Accounting and finance</li>
+            <li><i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> 360-degree data security</li>
+          </ul>
+          <div class="text-center">
+            <a href="#" class="btn_uniqe">Learn More</a>
+          </div>
+        </div>
       </div>
-   </div>
-   <!-- treatment section end -->
-   <section class="mb-5">
-      <div class="benefits-title" style="color: #000;">Technology of the <span style="color: #007BFF;">Software</span>
+    </div>
+
+    <!-- Card 3: Facility Staffing -->
+    <div class="col-md-4 mt-3">
+      <div class="card shadow-sm card_uniqe">
+        <div class="card-body">
+          <div class="text-center mb-3">
+            <i class="fas fa-users card-icon" style="font-size:2rem; color: #2176CB;"></i>
+          </div>
+          <h5 class="card-title text-center">Facility Staffing</h5>
+          <p class="card-text text-center">Take charge of the employees at your facility. You can easily schedule, communicate, and track everything in one location.</p>
+          <hr>
+          <ul style="list-style: none; line-height: 2rem;">
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Facility portal</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Planning a schedule</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Broadcast on a targeted schedule</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Management of caregivers and facilities</li>
+            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Compliance with facility staffing</li>
+          </ul>
+          <div class="text-center">
+            <a href="#" class="btn_uniqe">Learn More</a>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div class="custom-container custom-gallery1">
-         <a class="custom-photoLink col-sm-3" href="#">
-            <div id="custom-item1" class="custom-item custom-red">
-               <div class="custom-color custom-red">
-                  <i class="fa fa-camera"></i>
-               </div>
-            </div>
-         </a>
-
-         <a class="custom-photoLink col-sm-3" href="#">
-            <div id="custom-item2" class="custom-item">
-               <div class="custom-color custom-blue">
-                  <i class="fas fa-film"></i>
-               </div>
-            </div>
-         </a>
-
-         <a class="custom-photoLink col-sm-3" href="#">
-            <div id="custom-item3" class="custom-item">
-               <div class="custom-color custom-green">
-                  <i class="fas fa-server"></i>
-               </div>
-            </div>
-         </a>
-         <a class="custom-photoLink col-sm-3" href="#">
-            <div id="custom-item4" class="custom-item">
-               <div class="custom-color custom-green">
-                  <i class="fas fa-server"></i>
-               </div>
-            </div>
-         </a>
+  </div>
       </div>
-   </section>
+    </div>
 
-   <!-- testimonial section end -->
-   <!-- contact section start -->
-
-   <!-- contact section end -->
-
-   <!-- copyright section start -->
-   <div class="copyright_section bg-dark">
-      <div class="container">
-         <p class="copyright_text text-light">2024 All Rights Reserved. Design by <a class="text-light">HomeCare</a></p>
+    <!-- section-3 start -->
+    <div class="container reasons-section mt-5" >
+      <h1 class="text-center">There are so many reasons to switch to CareSmartz360</h1>
+      <p class="text-center">Here are just a few.</p>
+      <div class="row">
+          <div class="col-md-3 col-sm-6 mt-2 mb-3">
+              <div class="card h-100 " style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
+                  <img src="https://media.licdn.com/dms/image/D4D12AQEpykvbFoUQLw/article-cover_image-shrink_600_2000/0/1687038509576?e=2147483647&v=beta&t=-OogUeAx16RHB1VXK5QvlxFIVWlhXxeB2he5yfvV-8c" class="card-img-top" alt="360-degree data security">
+                  <div class="card-body">
+                      <h5 class="card-title " style=" font-size: 18px;   font-weight: bold;color: #333;">360-degree protection of data</h5>
+                      <p class="card-text" style="font-size: 17px; color: #666;">Security provided by Microsoft shields your data from breaches and illegal access.</p>
+                      <br>
+                      <br>
+                      <br>
+                      <a href="#" class="learn-more" >Learn More</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6  mt-2 mb-3">
+              <div class="card h-100" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
+                  <img src="https://media.licdn.com/dms/image/D4D12AQE_yeMSF0YKvA/article-cover_image-shrink_720_1280/0/1665148004877?e=2147483647&v=beta&t=Pl67hgVj23TzTeRr5Jxzlf_PYfBdQAyFtJkW70XbnmU" class="card-img-top" alt="Advanced analytics and insights">
+                  <div class="card-body">
+                      <h5 class="card-title" style=" font-size: 18px;   font-weight: bold;color: #333;">Sophisticated data and insights</h5>
+                      <p class="card-text" style="font-size: 17px; color: #666;">More than 100 reports with custom data reporting are available to help you make smarter decisions.
+                      </p>
+                      <br>
+                      <br>
+                      <a href="#" class="learn-more" >Learn More</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6  mt-2 mb-3">
+              <div class="card h-100" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
+                  <img src="https://sixtyandme.com/wp-content/uploads/2023/03/Sixty-and-Me_Granny-Cams-and-Care-Homes-%E2%80%93-Should-You-Can-You.jpg" class="card-img-top" alt="AI-based caregiver retention">
+                  <div class="card-body">
+                      <h5 class="card-title" style=" font-size: 18px;   font-weight: bold;color: #333;">AI-powered retention of caregivers</h5>
+                      <p class="card-text" style="font-size: 17px; color: #666;">The CareSmartz360 AI-Hub predicts a caregiver's probability of churn using robust predictive analytics.</p>
+                      <br>
+                      <br>
+                      <a href="#" class="learn-more">Learn More</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6  mt-2 mb-3">
+              <div class="card h-100" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
+                  <img src="https://media.licdn.com/dms/image/D4E12AQHrh2GChw25Fg/article-cover_image-shrink_720_1280/0/1711304884425?e=2147483647&v=beta&t=_mJTh9TIlHydFJ_0R12j6Ca1fN1aAaHQlV_6HYjc0e0" class="card-img-top" alt="EVV with time tracking">
+                  <div class="card-body">
+                      <h5 class="card-title" style=" font-size: 18px;   font-weight: bold;color: #333;">EVV with time monitoring</h5>
+                      <p class="card-text" style="font-size: 17px; color: #666;">Improved revenue, fewer claim errors, and compliance with advanced EVV features.</p>
+                      <br>
+                      <br>
+                      <br>
+                      <a href="#" class="learn-more">Learn More</a>
+                  </div>
+              </div>
+          </div>
       </div>
-   </div>
-   <!-- copyright section end -->
-   <!-- Javascript files-->
+  </div>
+     <!-- section-3 end -->
+
+     <!-- section-4 start -->
+     <div class="container">
+      <div class="row">
+          <div class="col-md-8">
+              <img src="https://static.tildacdn.com/tild6137-3465-4061-b861-306330633839/mobile-development-c.jpg"class="img-fluid" alt="">
+          </div>
+          <div class="col-md-4 mt-5 open">
+            
+              <div class="open mt-5">
+                  <h2 class="fw-bold" style="font-size: 35px;">API integrations that are open.<br>
+                    For you, it was curated!</h2>
+                      <p class="" style="font-size: 17px;">Examine and discover the robust integrations that CareSmartz360 offers your company.</p>
+                      <button class="btn py-3 px-4 text-light fw-bold text-start" style="background-color: #2176CB;" >Explore integrations <i class="fa-solid fa-arrow-right-long  mx-1 "></i></button>
+              </div>
+            
+              </div>
+      </div>
+     </div>
+      <!-- section-4 end -->
 
 
+    <!-- Footer start-->
+    <footer class="text-center text-lg-start text-white mt-3" style="color: black;">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-4" style="background-color: #2176CB">
+            <!-- Left -->
+            <div class="me-5">
+                <span class="fw-bold get">Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div style="list-style: none;">
+                <a href="#" class="text-white me-4">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto ">
+                        <!-- Content -->
+                        <h5 class="text-black">CareSmartz360</h5>
+                       
+                        <div class="mt-4">
+                        <a href="#"><p class="p_uniqe">About Us</p></a>
+                        <p><a href="#" class="p_uniqe">Pricing</a></p>
+
+                        <p><a href="#" class="p_uniqe">Partner Program</a></p>
 
 
-   <!-- javascript -->
-   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-   <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+                        <p><a href="#" class="p_uniqe">Contact Us</a></p>
+                        <p><a href="#" class="p_uniqe">Privacy</a></p>
 
+                        <p><a href="#" class="p_uniqe">Terms and Conditions</a></p>
+                      </div>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto ">
+                        <!-- Links -->
+                        <h5 class="text-black">Our Solution</h5>
+
+                        <div class="mt-4">
+                        <p><a href="#" class="p_uniqe">Home Care</a></p>
+                        <p><a href="#" class="p_uniqe">Franchisor</a></p>
+
+                        <h5 class="text-black">Who We Help</h5>
+                        
+                        <p><a href="#" class="p_uniqe">Schedulers</a></p>
+                        <p><a href="#" class="p_uniqe">Billers</a></p>
+                    </div>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto ">
+                        <!-- Links -->
+                        <h5 class="text-black">Resources</h5>
+                       
+                        <div class="mt-4">
+                        <p><a href="#" class="p_uniqe">Podcast</a></p>
+
+                        <p><a href="#" class="p_uniqe">Blog</a></p>
+                        <p><a href="#" class="p_uniqe">Events</a></p>
+                        <p><a href="#" class="p_uniqe">eBooks</a></p>
+                        <p><a href="#" class="p_uniqe">Whitepapers</a></p>
+                      </div>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 ">
+                        <!-- Contact -->
+                        <h5 class="text-black">Contact & Locations</h5>
+                        
+                        <div class="mt-4">
+                        <p class="p_uniqe"> United States (HQ)</p>
+                        <p class="p_uniqe">1250 Pittsford Victor Road Ste 310, Pittsford, NY 14534</p>
+                        <p class="p_uniqe">Canada (Sales Office)</p>
+                        <p class="p_uniqe">431 Blair Creek Dr, Kitchener, ON N2P 2N1</p>
+                        <p class="p_uniqe">Singapore (Sales Office)</p>
+                        <p class="p_uniqe">DUO Tower, 3 Fraser Street, Level 08-21 Singapore 189352</p>
+                      </div>
+                    </div>
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #2176CB">
+            © 2024 CareSmartz360. All Rights Reserved.
+            <a class="text-white" href="#">CareSmartz360.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer end-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
