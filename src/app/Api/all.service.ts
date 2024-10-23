@@ -274,10 +274,20 @@ public leadData: any;
     return this.get(superAdminEndPoints.leadupdate + id )
    }
 
-   
-   putleadupdate(id:any, data:any){
-    return this.put(superAdminEndPoints.leadupdatedata + id ,data )
-   }
+
+
+
+   putleadupdate(id:any, data:any) {
+    const headers = new HttpHeaders({
+    });
+  
+    return this.http.put(superAdminEndPoints.leadupdatedata +id , data, { headers });
+  }
+
+
+  //  putleadupdate(id:any, data:any){
+  //   return this.put(superAdminEndPoints.leadupdatedata + id ,data )
+  //  }
    
 
    setLeadData(data: any) {
