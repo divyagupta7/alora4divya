@@ -266,6 +266,28 @@ postDoctors(data: any) {
     return this.patch(superAdminEndPoints.updateleadestatusleads + id , data)
    }
 
+  
+public leadData: any;
+
+
+   leadupdate(id:any){
+    return this.get(superAdminEndPoints.leadupdate + id )
+   }
+
+   
+   putleadupdate(id:any, data:any){
+    return this.put(superAdminEndPoints.leadupdatedata + id ,data )
+   }
+   
+
+   setLeadData(data: any) {
+    this.leadData = data;
+  }
+
+  getLeadData() {
+    return this.leadData;
+  }
+
 
   
 

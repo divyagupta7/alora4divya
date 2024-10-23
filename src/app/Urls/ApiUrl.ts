@@ -37,5 +37,8 @@ export const superAdminEndPoints = {
     getCovidcSreening: `${baseUrl}doctor/accountStatusUpdate`,
     addleads: `${baseUrl}lead`,
     getleads: `${baseUrl}leads`,
-    updateleadestatusleads: `${baseUrl}lead/leadstatusupdate/`
+    updateleadestatusleads: `${baseUrl}lead/leadstatusupdate/`,
+    leadupdate: `${baseUrl}lead/`,
+     leadupdatedata: `${baseUrl}lead/`
+
 }

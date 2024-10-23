@@ -11,7 +11,7 @@ import { SweetsalertsServicesService } from 'src/app/sweetsalerts-services.servi
 })
 export class ClientComponent {
   updateForm!:FormGroup; 
-
+  leadData: any;
   constructor(
     private api:AllService,
     private route:Router,
@@ -21,39 +21,16 @@ export class ClientComponent {
   addclient() {
     this.route.navigate(['/Admin/Addclient'])
   }
-
-  
-  datasss:any= []
-
   patientsCount: any[] = [];
   paginatedDoctors: any[] = [];
-  patientsCounts: any[] = [];
   currentPage = 1;
   itemsPerPage = 10;
   totalPages = 0;
-  userId:any
   dataSend: any
 
-
   ngOnInit(): void {
-    const userIdString = localStorage.getItem('id');
-    this.userId = userIdString ? parseInt(userIdString, 10) : null;
-    console.log( 'admin id', this.userId);
     this.getPatients();
   }
-
-
-  updatePatient() {
-    this.api.updatePatientById(this.id, this.patientByIdData).subscribe((res: any) => {
-      console.log('Patient updated successfully', res);
-      this.swet.SucessToast(`Patient ${res.data.name} Update Successfully !`);
-      window.location.reload()
-    }, (error) => {
-      console.error('Error updating user', error);
-      // Handle error
-    });
-  }
-
 
   getPatients() {
     this.api.getleadss().subscribe((res: any) => {
@@ -83,14 +60,7 @@ export class ClientComponent {
     }
   }
 
-  id:any;
-  patientByIdData:any=[];
-  patientById(data: any) {
-  this.id = data;
-  this.api.patientById(data).subscribe((res: any) => {
-    this.patientByIdData = res.data[0];
-  })
-}
+
 toggleVerified(data: any) {
   var id = data.id;
   this.dataSend = {
@@ -109,6 +79,11 @@ toggleVerified(data: any) {
       }
     }
   });
+}
+
+
+viewClientProfile(clientId: string) {
+  this.route.navigate(['/Admin/Clientprofile_view', { id: clientId }]);
 }
 
 }

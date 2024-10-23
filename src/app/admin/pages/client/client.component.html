@@ -41,7 +41,7 @@
                     <th style="color: #4F99C6;">SERVICE TYPR</th>
                     <th style="color: #4F99C6;">CLIENT NOTES</th>
                     <th style="color: #4F99C6;">ADDRESS</th>
-                    <th style="color: #4F99C6;">Attach Document</th>
+                    <th style="color: #4F99C6;">ATTACH DOCUMENT </th>
                     <th style="color: #4F99C6;">EXPIRATION DATE</th>
                     <th style="color: #4F99C6;">SET REMINDER</th>
                     <th style="color: #4F99C6;">PHONE</th>
@@ -52,15 +52,15 @@
                 <tr style="background-color: #f9f9f9;" *ngFor="let a of patientsCount;   let i = index">
                     <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
                     <td> {{a.medicaidId}} </td>
-                    <td><a routerLink="/Admin/Clientprofile_view" style="text-decoration: none;">{{a.name}}</a></td>
+                    <td><a (click)="viewClientProfile(a.id)" style="text-decoration: none;">{{a.name}}</a></td>
                     <td>{{a.email}}</td>
                     <td>{{a.servicetype}}</td>
                     <td>{{a.note}}</td>
-                    <td></td>
-                    <td></td>
-                    <td class="text-center">236-587-2629</td>
-                    <td class="text-center">name0213@gamil.com</td>
-                    <td class="text-center">236-587-2629</td>
+                    <td>{{a.address}}</td>
+                    <td>{{a.attachDoc}}</td>
+                    <td class="text-center">{{a.docExpiryDate}}</td>
+                    <td class="text-center">Set Reminder</td>
+                    <td class="text-center">{{a.contactNumber}}</td>
                     <td class="text-center"><span><i class="fa-solid fa-user text-primary"
                                 style="padding-right: 10px;"></i></span> <span><i
                                 class="fa-sharp fa-solid fa-list text-primary" style="padding-right: 10px;"></i></span>

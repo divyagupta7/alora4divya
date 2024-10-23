@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Apexcare360</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://kit.fontawesome.com/7d08567bd4.css" crossorigin="anonymous">
+</head>
+
+<body>
+   <div class="row text-center p-2" style="background-color: #2176CB; color: white;">
+      <div class="col-md-4">
+         <h6><i class="fa-solid fa-phone" style="color: #F79707;"></i> : +01 1234567890</h6>
+      </div>
+      <div class="col-md-4">
+         <h6><i class="fa-solid fa-envelope" style="color: #F79707;"></i> : demo@gmail.com</h6>
+      </div>
+      <div class="col-md-4">
+         <h6><i class="fa-sharp fa-solid fa-location-dot" style="color: #F79707;"></i> : Location</h6>
+      </div>
+   </div>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#"><img src="../../assets/74EB1EE2-13F5-4D86-99AE-A798B5CDABB1.png" alt="logo"
+               style="height: 70px;"></a>
+         <div class="text-center">
+            <button class="btn btn fw-bold "
+               style="width: 150px; height: 40px; background-color: #2176CB; color: white;" type="submit"
+               routerLink="/mainLogin">Login</button>
+         </div>
+      </div>
+   </nav>
+   <div class="container-fluid demo-section text-center h-100"
+      style="padding: 50px 0; background-color: #003366; color: white;">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6 mb-3">
+               <h2 style="font-weight: bold;">We assist Home Care in providing optimal care.</h2>
+               <p class="text-start">To find out how we can assist you in achieving operational excellence, speak with a
+                  ApexCare360 specialist.</p>
+               <ul class="text-start">
+                  <li><strong>Increase ROI -</strong> ApexCare360 helps  more money.</li>
+               </ul>
+               <img
+                  src="https://www.enezhealth.com/wp-content/uploads/Types-of-Home-Care.jpg"
+                  alt="ApexCare360Screen" class=" w-50" style="width: 60%; border-radius: 10px;  ">
+            
+            </div>
+            <div class="col-md-6">
+
+               <div class="form-section"
+                  style="    background-color: #fff; border-radius: 8px;  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);  padding: 30px;">
+                  <h1 class="text-black">Lead Generate</h1>
+                  <p>Sign up today & get ApexCare360 for the rest of 2024!</p>
+                 
+                  <div class="row">
+                     <form [formGroup]="leadform">
+
+                     <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control" placeholder="Name" formControlName="name" >
+                     </div>
+
+                     <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                     </div>
+
+                     <div class="col-md-12  mb-3">
+                        <select class="form-control" formControlName="servicetype">
+                           <option value="">Service Type</option>
+                           <option value="Caregiver">Caregiver</option>
+                           <option value="Client">Client</option>
+                        </select>
+                     </div>
+
+                     <div class="col-sm-12 mb-3">
+                        <input type="text" class="form-control" placeholder="Note" formControlName="note" >
+                     </div>
+
+                     <div class="col-md-12 text-start ">
+                        <button class="btn"
+                           style="background-color: #003366; color: white;"  (click)="onSubmit()">Submit</button>
+                     </div>
+
+                  </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="mt-5">
+      <h1 class="text-center">1 Home care management software</h1>
+      <p class="text-center">ApexCare360 enables franchises, facilities, and home care companies to succeed.</p>
+      <div class="container py-3">
+         <div class="row">
+            <div class="col-md-4 mt-3">
+               <div class="card shadow-sm card_uniqe">
+                  <div class="card-body">
+                     <div class="text-center mb-3">
+                        <i class="fas fa-home card-icon" style="font-size:2rem; color: #2176CB;"></i>
+                     </div>
+                     <h5 class="card-title text-center">Home Care</h5>
+                     <p class="card-text text-center">ApexCare360 streamlines processes, improves services, and aids in
+                        the expansion of your home care business.</p>
+                     <hr>
+                     <ul style="list-style: none; line-height: 2rem;">
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Smart billing and EVV</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Custom reporting and scheduling</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Evaluation of the client and care plan</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           sophisticated mobile portals and apps</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Training for caregivers</li>
+                     </ul>
+                     <div class="text-center">
+                        <a href="#" class="btn_uniqe">Learn More</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-md-4 mt-3">
+               <div class="card shadow-sm card_uniqe">
+                  <div class="card-body">
+                     <div class="text-center mb-3">
+                        <i class="fas fa-sitemap card-icon" style="font-size:2rem; color: #2176CB;"></i>
+                     </div>
+                     <h5 class="card-title text-center">Franchisor Management</h5>
+                     <p class="card-text text-center">Make that all of your franchise locations have consistent
+                        operations, safe data sharing, and <br>support.</p>
+                     <hr>
+                     <ul style="list-style: none; line-height: 2rem;">
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Development of franchises</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Management of many locations</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Support and migration for franchises</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Accounting and finance</li>
+                        <li><i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           360-degree data security</li>
+                     </ul>
+                     <div class="text-center">
+                        <a href="#" class="btn_uniqe">Learn More</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-md-4 mt-3">
+               <div class="card shadow-sm card_uniqe">
+                  <div class="card-body">
+                     <div class="text-center mb-3">
+                        <i class="fas fa-users card-icon" style="font-size:2rem; color: #2176CB;"></i>
+                     </div>
+                     <h5 class="card-title text-center">Facility Staffing</h5>
+                     <p class="card-text text-center">Take charge of the employees at your facility. You can easily
+                        schedule, communicate, and track everything in one location.</p>
+                     <hr>
+                     <ul style="list-style: none; line-height: 2rem;">
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Facility portal</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Planning a schedule</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Broadcast on a targeted schedule</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Management of caregivers and facilities</li>
+                        <li> <i class="fa-duotone fa-solid fa-square-check"
+                              style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i>
+                           Compliance with facility staffing</li>
+                     </ul>
+                     <div class="text-center">
+                        <a href="#" class="btn_uniqe">Learn More</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+   <div class="container reasons-section mt-5">
+      <h1 class="text-center">There are so many reasons to switch to ApexCare360</h1>
+      <p class="text-center">Here are just a few.</p>
+      <div class="row">
+         <div class="col-md-3 col-sm-6 mt-2 mb-3">
+            <div class="card h-100 "
+               style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
+               <img
+                  src="https://media.licdn.com/dms/image/D4D12AQEpykvbFoUQLw/article-cover_image-shrink_600_2000/0/1687038509576?e=2147483647&v=beta&t=-OogUeAx16RHB1VXK5QvlxFIVWlhXxeB2he5yfvV-8c"
+                  class="card-img-top" alt="360-degree data security">
+               <div class="card-body">
+                  <h5 class="card-title " style=" font-size: 18px;   font-weight: bold;color: #333;">360-degree
+                     protection of data</h5>
+                  <p class="card-text" style="font-size: 17px; color: #666;">Security provided by Microsoft shields your
+                     data from breaches and illegal access.</p>
+                  <br>
+                  <br>
+                  <br>
+                  <a href="#" class="learn-more">Learn More</a>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-6  mt-2 mb-3">
+            <div class="card h-100"
+               style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
+               <img
+                  src="https://media.licdn.com/dms/image/D4D12AQE_yeMSF0YKvA/article-cover_image-shrink_720_1280/0/1665148004877?e=2147483647&v=beta&t=Pl67hgVj23TzTeRr5Jxzlf_PYfBdQAyFtJkW70XbnmU"
+                  class="card-img-top" alt="Advanced analytics and insights">
+               <div class="card-body">
+                  <h5 class="card-title" style=" font-size: 18px;   font-weight: bold;color: #333;">Sophisticated data
+                     and insights</h5>
+                  <p class="card-text" style="font-size: 17px; color: #666;">More than 100 reports with custom data
+                     reporting are available to help you make smarter decisions.
+                  </p>
+                  <br>
+                  <br>
+                  <a href="#" class="learn-more">Learn More</a>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-6  mt-2 mb-3">
+            <div class="card h-100"
+               style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
+               <img
+                  src="https://sixtyandme.com/wp-content/uploads/2023/03/Sixty-and-Me_Granny-Cams-and-Care-Homes-%E2%80%93-Should-You-Can-You.jpg"
+                  class="card-img-top" alt="AI-based caregiver retention">
+               <div class="card-body">
+                  <h5 class="card-title" style=" font-size: 18px;   font-weight: bold;color: #333;">AI-powered retention
+                     of caregivers</h5>
+                  <p class="card-text" style="font-size: 17px; color: #666;">The ApexCare360 AI-Hub predicts a
+                     caregiver's probability of churn using robust predictive analytics.</p>
+                  <br>
+                  <br>
+                  <a href="#" class="learn-more">Learn More</a>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-6  mt-2 mb-3">
+            <div class="card h-100"
+               style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
+               <img
+                  src="https://media.licdn.com/dms/image/D4E12AQHrh2GChw25Fg/article-cover_image-shrink_720_1280/0/1711304884425?e=2147483647&v=beta&t=_mJTh9TIlHydFJ_0R12j6Ca1fN1aAaHQlV_6HYjc0e0"
+                  class="card-img-top" alt="EVV with time tracking">
+               <div class="card-body">
+                  <h5 class="card-title" style=" font-size: 18px;   font-weight: bold;color: #333;">EVV with time
+                     monitoring</h5>
+                  <p class="card-text" style="font-size: 17px; color: #666;">Improved revenue, fewer claim errors, and
+                     compliance with advanced EVV features.</p>
+                  <br>
+                  <br>
+                  <br>
+                  <a href="#" class="learn-more">Learn More</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+            <img src="https://static.tildacdn.com/tild6137-3465-4061-b861-306330633839/mobile-development-c.jpg"
+               class="img-fluid" alt="">
+         </div>
+         <div class="col-md-4 mt-5 open">
+
+            <div class="open mt-5">
+               <h2 class="fw-bold" style="font-size: 35px;">API integrations that are open.<br>
+                  For you, it was curated!</h2>
+               <p class="" style="font-size: 17px;">Examine and discover the robust integrations that ApexCare360 offers
+                  your company.</p>
+               <button class="btn py-3 px-4 text-light fw-bold text-start" style="background-color: #2176CB;">Explore
+                  integrations <i class="fa-solid fa-arrow-right-long  mx-1 "></i></button>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <footer class="text-center text-lg-start text-white mt-3" style="color: black;">
+      <section class="d-flex justify-content-between p-4" style="background-color: #2176CB">
+         <div class="me-5">
+            <span class="fw-bold get">Get connected with us on social networks:</span>
+         </div>
+
+         <div style="list-style: none;">
+            <a href="#" class="text-white me-4">
+               <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-white me-4">
+               <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-white me-4">
+               <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="text-white me-4">
+               <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-white me-4">
+               <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="text-white me-4">
+               <i class="fab fa-github"></i>
+            </a>
+         </div>
+      </section>
+
+      <section class="">
+         <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+               <div class="col-md-3 col-lg-3 col-xl-3 mx-auto ">
+                  <h5 class="text-black">ApexCare360</h5>
+
+                  <div class="mt-4">
+                     <a href="#">
+                        <p class="p_uniqe">About Us</p>
+                     </a>
+                     <p><a href="#" class="p_uniqe">Pricing</a></p>
+
+                     <p><a href="#" class="p_uniqe">Partner Program</a></p>
+
+
+                     <p><a href="#" class="p_uniqe">Contact Us</a></p>
+                     <p><a href="#" class="p_uniqe">Privacy</a></p>
+
+                     <p><a href="#" class="p_uniqe">Terms and Conditions</a></p>
+                  </div>
+               </div>
+
+               <div class="col-md-3 col-lg-2 col-xl-2 mx-auto ">
+                  <h5 class="text-black">Our Solution</h5>
+
+                  <div class="mt-4">
+                     <p><a href="#" class="p_uniqe">Home Care</a></p>
+                     <p><a href="#" class="p_uniqe">Franchisor</a></p>
+
+                     <h5 class="text-black">Who We Help</h5>
+
+                     <p><a href="#" class="p_uniqe">Schedulers</a></p>
+                     <p><a href="#" class="p_uniqe">Billers</a></p>
+                  </div>
+
+               </div>
+
+               <div class="col-md-3 col-lg-3 col-xl-3 mx-auto ">
+                  <h5 class="text-black">Resources</h5>
+
+                  <div class="mt-4">
+                     <p><a href="#" class="p_uniqe">Podcast</a></p>
+
+                     <p><a href="#" class="p_uniqe">Blog</a></p>
+                     <p><a href="#" class="p_uniqe">Events</a></p>
+                     <p><a href="#" class="p_uniqe">eBooks</a></p>
+                     <p><a href="#" class="p_uniqe">Whitepapers</a></p>
+                  </div>
+
+               </div>
+
+               <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 ">
+                  <h5 class="text-black">Contact & Locations</h5>
+
+                  <div class="mt-4">
+                     <p class="p_uniqe"> United States (HQ)</p>
+                     <p class="p_uniqe">1250 Pittsford Victor Road Ste 310, Pittsford, NY 14534</p>
+                     <p class="p_uniqe">Canada (Sales Office)</p>
+                     <p class="p_uniqe">431 Blair Creek Dr, Kitchener, ON N2P 2N1</p>
+                     <p class="p_uniqe">Singapore (Sales Office)</p>
+                     <p class="p_uniqe">DUO Tower, 3 Fraser Street, Level 08-21 Singapore 189352</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <div class="text-center p-3" style="background-color: #2176CB">
+         © 2024 ApexCare360. All Rights Reserved.
+         <a class="text-white" href="#">ApexCare360.com</a>
+      </div>
+   </footer>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
