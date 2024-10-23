@@ -66,152 +66,149 @@
    <!-- navbar end -->
 
 
-    <!-- section-1 start -->
-    <div class="container-fluid demo-section text-center h-100" style="padding: 50px 0; background-color: #003366; color: white;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <h2 style="font-weight: bold;">We assist home care agencies in providing optimal care.</h2>
-                <p class="text-start">To find out how we can assist you in achieving operational excellence, speak with a CareSmartz360 specialist.</p>
-                <ul class="text-start">
-                    <li><strong>Increase ROI -</strong> CareSmartz360 helps agencies make 35% more money.</li>
-                    <li><strong>Be Profitable-</strong> Be Profitable: Make the most of your resources and increase profits by 50%.</li>
-                    <li><strong>Stay Compliant-</strong> We take care of your EVV, HIPAA, and Medicaid compliance.</li>
-                </ul>
-                <img src="https://cdn-ikpmepd.nitrocdn.com/bZEsIxCYpMlulSPiWCaWfdLzdYuZsrCW/assets/images/optimized/rev-26d0350/www.caresmartz360.com/wp-content/themes/caresmartz/images/Demo-Image1.png"
-                    alt="CareSmartz360 Screen" class=" w-50" style="width: 60%;  ">
-                <!-- <div class="testimonial" style="   font-style: italic; font-size: 14px;   color: #ccc;  margin-top: 20px;">
-                    “CareSmartz360 boosted our efficiency with streamlined scheduling, real-time access, and time &
-                    attendance tracking. It saved us on staffing and paper costs!”<br>
-                    <strong>Heather Attilio, Sterling Care Assisted Living</strong>
-                </div> -->
-            </div>
-            <div class="col-md-6">
+<!-- section-1 start -->
+<div class="container-fluid demo-section text-center h-100" style="padding: 50px 0; background-color: #003366; color: white;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 mb-3">
+              <h2 style="font-weight: bold;">Welcome to APEXCARE360</h2>
+              <p class="text-start">At APEXCARE360, we provide an intuitive, office-focused software solution designed to streamline your home care operations. Our platform simplifies management of Leads, Clients, and Caregivers, ensuring an effortless transition from prospect to client, and providing powerful tools for compliance, document management, and caregiver coordination.</p>
               
-                <div class="form-section" style="    background-color: #fff; border-radius: 8px;  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);  padding: 30px;">
-                  <h1 class="text-black">Lead Generate</h1>
-                    <!-- <h3>Book a demo <span class="badge" style=" background-color: #ffcc00;  color: #003366;  font-weight: bold; padding: 5px 10px; border-radius: 5px; margin-left: 10px;">50% OFF</span></h3> -->
-                    <p>Sign up today & get CareSmartz360 at 50% Off for the rest of 2024!</p>
+              <img src="https://cdn-ikpmepd.nitrocdn.com/bZEsIxCYpMlulSPiWCaWfdLzdYuZsrCW/assets/images/optimized/rev-26d0350/www.ApexCare360.com/wp-content/themes/caresmartz/images/Demo-Image1.png"
+                  alt="ApexCare360Screen" class=" w-50" style="width: 60%;  ">
+          </div>
+          <div class="col-md-6">
+            
+              <div class="form-section" style="    background-color: #fff; border-radius: 8px;  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);  padding: 30px;">
+                <h1 class="text-black">Lead Generate</h1>
+                  <p>Sign up today & get ApexCare360at 50% Off for the rest of 2024!</p>
 
 
-                    <div class="row">
-                        <div class="col-md-12 mb-3">
-                            <input type="text" class="form-control" placeholder="Name*" formControlName="  " required>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <input type="email" class="form-control" placeholder="Email*" formControlName="  " >
-                        </div>
-                       
-                        <div class="col-md-12  mb-3">
-                            <select class="form-control">
-                                <option>Service Type</option>
-                                <option>Caregiver</option>
-                                <option>Client</option>
-                                <!-- Add options for states/regions here -->
-                            </select>
-                        </div>
-                       
-                        <div class="col-sm-12 mb-3">
-                          <input type="text" class="form-control" placeholder="Note" formControlName="  " required>
-                      </div>
-                       
-                          <div class="col-md-12 text-start ">
-                              <button type="button" class="btn" style="background-color: #003366; color: white;">Submit</button>
-                          </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    <!-- section-1 end -->
+                  <div class="row">
+                    <form [formGroup]="leadform">
+
+                    <div class="col-md-12 mb-3">
+                       <input type="text" class="form-control" placeholder="Name" formControlName="name" >
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                       <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                    </div>
+
+                    <div class="col-md-12  mb-3">
+                       <select class="form-control" formControlName="servicetype">
+                          <option value="">Service Type</option>
+                          <option value="Caregiver">Caregiver</option>
+                          <option value="Client">Client</option>
+                       </select>
+                    </div>
+
+                    <div class="col-sm-12 mb-3">
+                       <input type="text" class="form-control" placeholder="Note" formControlName="note" >
+                    </div>
+
+                    <div class="col-md-12 text-start ">
+                       <button class="btn"
+                          style="background-color: #003366; color: white;"  (click)="onSubmit()">Submit</button>
+                    </div>
+
+                 </form>
+                 </div>
 
 
-    <!-- section-2 start -->
-    <div class="mt-5">
-     <h1 class="text-center">1 Home care management software</h1>
-     <p class="text-center">CareSmartz360 enables franchises, facilities, and home care companies to succeed.</p>
-      <div class="container py-3">
+
+          </div>
+      </div>
+  </div>
+  </div>
+  </div>
+  <!-- section-1 end -->
+
+<!-- section-2 start -->
+<div class="mt-5">
+  <h1 class="text-center">Our Core Features</h1>
   <div class="row">
-    <!-- Card 1: Home Care -->
-    <div class="col-md-4 mt-3">
-      <div class="card shadow-sm card_uniqe">
-        <div class="card-body">
-          <div class="text-center mb-3">
-            <i class="fas fa-home card-icon"  style="font-size:2rem; color: #2176CB;"></i>
-          </div>
-          <h5 class="card-title text-center">Home Care</h5>
-          <p class="card-text text-center">CareSmartz360 streamlines processes, improves services, and aids in the expansion of your home care business.</p>
-          <hr>
-          <ul style="list-style: none; line-height: 2rem;">
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Smart billing and EVV</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Custom reporting and scheduling</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Evaluation of the client and care plan</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> sophisticated mobile portals and apps</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Training for caregivers</li>
-          </ul>
-          <div class="text-center">
-            <a href="#" class="btn_uniqe">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
+ <!-- Card 1: Leads Management -->
+ <div class="col-md-4 mt-3">
+   <div class="card shadow-sm card_uniqe h-100">
+     <div class="card-body">
+       <div class="text-center mb-3">
+         <i class="fas fa-home card-icon"  style="font-size:2rem; color: #2176CB;"></i>
+       </div>
+       <h5 class="card-title text-center">Leads Management</h5>
+       <p class="card-text text-center">Our Leads module allows you to seamlessly manage prospective clients who reach out to your home care agency. Here’s how we make it easier: </p>
+       <hr>
+       <ul style="list-style: none; line-height: 2rem;">
+         <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Keep track of all incoming leads, ensuring none are missed.</li>
+         <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Once approved, leads are easily transferred into the Clients section with just a few clicks.</li>
+         <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> All prospective client data stays with you, facilitating a smooth transition from inquiry to care.</li>
+       
+       </ul>
+       <br>
+       <br><br>
+       <div class="text-center">
+         <a href="#" class="btn_uniqe">Learn More</a>
+       </div>
+     </div>
+   </div>
+ </div>
 
-    <!-- Card 2: Franchisor Management -->
-    <div class="col-md-4 mt-3">
-      <div class="card shadow-sm card_uniqe">
-        <div class="card-body">
-          <div class="text-center mb-3">
-            <i class="fas fa-sitemap card-icon" style="font-size:2rem; color: #2176CB;"></i>
-          </div>
-          <h5 class="card-title text-center">Franchisor Management</h5>
-          <p class="card-text text-center">Make that all of your franchise locations have consistent operations, safe data sharing, and <br>support.</p>
-          <hr>
-          <ul style="list-style: none; line-height: 2rem;">
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Development of franchises</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Management of many locations</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Support and migration for franchises</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Accounting and finance</li>
-            <li><i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> 360-degree data security</li>
-          </ul>
-          <div class="text-center">
-            <a href="#" class="btn_uniqe">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
+ <!-- Card 2: Clients Management -->
+ <div class="col-md-4 mt-3">
+   <div class="card shadow-sm card_uniqe h-100">
+     <div class="card-body">
+       <div class="text-center mb-3">
+         <i class="fas fa-sitemap card-icon" style="font-size:2rem; color: #2176CB;"></i>
+       </div>
+       <h5 class="card-title text-center">Clients Management</h5>
+       <p class="card-text text-center">Managing your clients is effortless with our Client Management section. You can:</p>
+       <hr>
+       <ul style="list-style: none; line-height: 2rem;">
+         <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Access detailed client profiles, including personal information and Medicaid ID.</li>
+         <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Attach important documents such as contracts, service agreements, or care plans to each profile.</li>
+         <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Stay compliant with built-in expiration tracking and automated renewal reminders for all client documents.</li>
+         <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Add personal care notes and manage ongoing service records to ensure that every client receives the attention they need.</li>
+         
+       </ul>
+       <div class="text-center">
+         <a href="#" class="btn_uniqe">Learn More</a>
+       </div>
+     </div>
+   </div>
+ </div>
 
-    <!-- Card 3: Facility Staffing -->
-    <div class="col-md-4 mt-3">
-      <div class="card shadow-sm card_uniqe">
-        <div class="card-body">
-          <div class="text-center mb-3">
-            <i class="fas fa-users card-icon" style="font-size:2rem; color: #2176CB;"></i>
-          </div>
-          <h5 class="card-title text-center">Facility Staffing</h5>
-          <p class="card-text text-center">Take charge of the employees at your facility. You can easily schedule, communicate, and track everything in one location.</p>
-          <hr>
-          <ul style="list-style: none; line-height: 2rem;">
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Facility portal</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Planning a schedule</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Broadcast on a targeted schedule</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Management of caregivers and facilities</li>
-            <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Compliance with facility staffing</li>
-          </ul>
-          <div class="text-center">
-            <a href="#" class="btn_uniqe">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
+ <!-- Card 3: Caregivers Management -->
+ <div class="col-md-4 mt-3">
+   <div class="card shadow-sm card_uniqe h-100" >
+     <div class="card-body">
+       <div class="text-center mb-3">
+         <i class="fas fa-users card-icon" style="font-size:2rem; color: #2176CB;"></i>
+       </div>
+       <h5 class="card-title text-center">Caregivers Management</h5>
+       <p class="card-text text-center">With our Caregiver module, you can efficiently manage caregiver documentation, certifications, and availability:</p>
+       <hr>
+       <ul style="list-style: none; line-height: 2rem;">
+         <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Easily view and update caregiver profiles, storing all necessary documents in one place.</li>
+         <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Create and send forms for caregivers to sign electronically, reducing paperwork and streamlining the hiring or renewal process.</li>
+         <li> <i class="fa-duotone fa-solid fa-square-check" style="background-color: #2176CB; color: white;border-radius: 1rem; font-size: larger;"></i> Allow caregivers to complete forms via email or through our mobile app, adding flexibility and reducing time for both the office and the caregiver.</li>
+        
+       </ul>
+       <br>
+       <div class="text-center">
+         <a href="#" class="btn_uniqe">Learn More</a>
+       </div>
+     </div>
+   </div>
+ </div>
 
   </div>
-      </div>
-    </div>
+   
+ </div>
+ <!-- section-2 end -->
 
     <!-- section-3 start -->
     <div class="container reasons-section mt-5" >
-      <h1 class="text-center">There are so many reasons to switch to CareSmartz360</h1>
+      <h1 class="text-center">There are so many reasons to switch to ApexCare360</h1>
       <p class="text-center">Here are just a few.</p>
       <div class="row">
           <div class="col-md-3 col-sm-6 mt-2 mb-3">
@@ -242,10 +239,10 @@
           </div>
           <div class="col-md-3 col-sm-6  mt-2 mb-3">
               <div class="card h-100" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
-                  <img src="https://sixtyandme.com/wp-content/uploads/2023/03/Sixty-and-Me_Granny-Cams-and-Care-Homes-%E2%80%93-Should-You-Can-You.jpg" class="card-img-top" alt="AI-based caregiver retention">
+                  <img src="https://shiftcare.com/us/img/asset/YXNzZXRzL2ltYWdlLXJlc2l6aW5nLShmYWNlYm9vay1jb3ZlciktKDk4KS5wbmc=/image-resizing-%28facebook-cover%29-%2898%29.png?w=1000&h=588&s=ce044f8a0e1e317e8d4fbdde3181a53b" class="card-img-top" alt="AI-based caregiver retention">
                   <div class="card-body">
                       <h5 class="card-title" style=" font-size: 18px;   font-weight: bold;color: #333;">AI-powered retention of caregivers</h5>
-                      <p class="card-text" style="font-size: 17px; color: #666;">The CareSmartz360 AI-Hub predicts a caregiver's probability of churn using robust predictive analytics.</p>
+                      <p class="card-text" style="font-size: 17px; color: #666;">The ApexCare360AI-Hub predicts a caregiver's probability of churn using robust predictive analytics.</p>
                       <br>
                       <br>
                       <a href="#" class="learn-more">Learn More</a>
@@ -269,38 +266,33 @@
   </div>
      <!-- section-3 end -->
 
-     <!-- section-4 start -->
-     <div class="container">
-      <div class="row">
-          <div class="col-md-8">
-              <img src="https://static.tildacdn.com/tild6137-3465-4061-b861-306330633839/mobile-development-c.jpg"class="img-fluid" alt="">
-          </div>
-          <div class="col-md-4 mt-5 open">
-            
-              <div class="open mt-5">
-                  <h2 class="fw-bold" style="font-size: 35px;">API integrations that are open.<br>
-                    For you, it was curated!</h2>
-                      <p class="" style="font-size: 17px;">Examine and discover the robust integrations that CareSmartz360 offers your company.</p>
-                      <button class="btn py-3 px-4 text-light fw-bold text-start" style="background-color: #2176CB;" >Explore integrations <i class="fa-solid fa-arrow-right-long  mx-1 "></i></button>
-              </div>
-            
-              </div>
-      </div>
-     </div>
-      <!-- section-4 end -->
+   <!-- section-4 start -->
+   <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://static.tildacdn.com/tild6137-3465-4061-b861-306330633839/mobile-development-c.jpg"class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6 mt-5">
+          
+            <div class="open mt-5">
+                <h2 class="fw-bold" style="font-size: 35px;">Why Choose APEXCARE360<br>
+                  For you, it was curated!</h2>
+                    <p class="">At APEXCARE360, we know that home care management involves more than just scheduling – it’s about providing personal care services that make a difference. Our system is specifically designed for non-healthcare-related personal care services, allowing you to focus on what matters most: delivering exceptional care to your clients. We help you stay organized, compliant, and efficient, without the complexities of medical billing</p>
+                   
+            </div>
+          
+            </div>
+    </div>
+   </div>
+    <!-- section-4 end -->
 
 
     <!-- Footer start-->
     <footer class="text-center text-lg-start text-white mt-3" style="color: black;">
-        <!-- Section: Social media -->
         <section class="d-flex justify-content-between p-4" style="background-color: #2176CB">
-            <!-- Left -->
             <div class="me-5">
                 <span class="fw-bold get">Get connected with us on social networks:</span>
             </div>
-            <!-- Left -->
-
-            <!-- Right -->
             <div style="list-style: none;">
                 <a href="#" class="text-white me-4">
                     <i class="fab fa-facebook-f"></i>
@@ -333,7 +325,7 @@
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto ">
                         <!-- Content -->
-                        <h5 class="text-black">CareSmartz360</h5>
+                        <h5 class="text-black">ApexCare360</h5>
                        
                         <div class="mt-4">
                         <a href="#"><p class="p_uniqe">About Us</p></a>
@@ -407,8 +399,8 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: #2176CB">
-            © 2024 CareSmartz360. All Rights Reserved.
-            <a class="text-white" href="#">CareSmartz360.com</a>
+            © 2024 ApexCare360. All Rights Reserved.
+            <a class="text-white" href="#">ApexCare360.com</a>
         </div>
         <!-- Copyright -->
     </footer>
