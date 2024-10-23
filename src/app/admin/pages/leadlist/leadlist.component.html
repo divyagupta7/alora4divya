@@ -1,17 +1,10 @@
-<p>leadlist works!</p>
-
-
 <div class="container-fluid  mt-3">
   <div class="page-title">Lead<span class="sub-title ms-2"> <i class="fa-duotone fa-solid fa-arrows-turn-right"></i>Lead
       Search</span></div>
   <div class="col-lg-12 col-md-12 d-flex  gap-2  mt-2 "
     style="background-color: #F7F7F7; white-space: wrap ; height: 70px;">
     <h5 class="fs-4 mt-3 text-center p-2" style="color: #777 ;">Lead</h5>
-    <!-- <span><button type="button"
-          class="btn text-white mt-3" style="background-color: #4F99C6;"  [routerLink]="['/Admin/add_patients']"><span><i
-              class="fa-sharp fa-solid fa-plus"></i></span> Add</button></span> -->
   </div>
-
   <div class="row">
     <div class="col-md-6 col-12 mt-3">
       <form class="form-inline mb-3" style="display: flex;">
@@ -32,40 +25,40 @@
         <label for="entries fw-bold">entries</label>
       </div>
     </div>
-
-
   </div>
-
   <div class="" style="overflow-x: scroll;">
     <table class="table table-bordered table-hover table-striped ">
       <thead class="" style="font-size: 13px; text-wrap: nowrap; ">
-
         <tr>
           <th style="color: #4F99C6;">SR NO</th>
           <th style="color: #4F99C6;">LEAD NAME</th>
           <th style="color: #4F99C6;">EMAIL </th>
           <th style="color: #4F99C6;">SERVICES TYPE</th>
           <th style="color: #4F99C6;">NOTE </th>
-          <th style="color: #4F99C6;">ACTIONS </th>
-
+          <th style="color: #4F99C6;">STATUS</th>
         </tr>
       </thead>
       <tbody style="text-wrap: nowrap;" class="">
-        <tr style="    background-color: #f9f9f9;">
-          <td>1</td>
-          <td><a routerLink="/Admin/Clientprofile_view"
-            style="text-decoration: none;">Dunn,Doris</a></td>
-          <td>name0213@gamil.com</td>
-          <td>	Osmel Villarreal</td>
-          <td></td>
-          <td><input type="checkbox" data-toggle="switchbutton" checked data-onlabel="Enabled" data-offlabel="Disabled" data-onstyle="success" data-offstyle="danger"></td>
-
-          <!-- <td class="text-center"><span><i class="fa-solid fa-user text-primary"
-                style="padding-right: 10px;"></i></span> <span><i class="fa-sharp fa-solid fa-list text-primary"
-                style="padding-right: 10px;"></i></span>
-            <span><i class="fa-regular fa-calendar-days text-primary " style="padding-right: 10px;"></i></span> <span><i
-                class="fa-sharp fa-solid fa-envelope text-primary" style="padding-right: 10px;"></i></span>
-          </td> -->
+        <tr style="background-color: #f9f9f9;" *ngFor="let a of patientsCount;   let i = index">
+          <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+          <td><a routerLink="/Admin/Clientprofile_view" style="text-decoration: none;">{{a.name}}</a></td>
+          <td>{{a.email}}</td>
+          <td>{{a.servicetype}}</td>
+          <td>{{a.note}}</td>
+              <td>
+                <div class="pretty p-default p-thick p-pulse" *ngIf="a.leadStatus">
+                  <input type="checkbox" [checked]="true" (change)="toggleVerified(a)" />
+                  <div  class="state p-success-o">
+                    <label>Approved</label>
+                  </div>
+                </div>
+                <div class="pretty p-default p-thick p-pulse" *ngIf="!a.leadStatus">
+                  <input type="checkbox" [checked]="false" (change)="toggleVerified(a)" />
+                  <div  class="state p-warning-o">
+                    <label>Disapproved</label>
+                  </div>
+                </div>
+              </td>
         </tr>
       </tbody>
     </table>
@@ -82,10 +75,6 @@
         <li class="page-item"><a class="page-link">Next</a></li>
         <li class="page-item"><a class="page-link">Last</a></li>
       </ul>
-
     </div>
-
   </div>
-
-
 </div>

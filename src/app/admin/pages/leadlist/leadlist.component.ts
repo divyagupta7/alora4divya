@@ -10,8 +10,7 @@ import { SweetsalertsServicesService } from 'src/app/sweetsalerts-services.servi
   styleUrls: ['./leadlist.component.css']
 })
 export class LeadlistComponent { 
-
-
+  
   updateForm!:FormGroup;  
   constructor(
     private api:AllService,
@@ -19,15 +18,6 @@ export class LeadlistComponent {
     private fb:FormBuilder,
   private swet :SweetsalertsServicesService
   ){
-    this.updateForm = this.fb.group({
-      name:[''],
-      middlename:[''],
-      lastname:[''],
-      dateofBirth:[''],
-      gender:[''],
-      city:[''],
-      email:[''],
-    })
   }
   
   patientsCount: any[] = [];
@@ -36,6 +26,7 @@ export class LeadlistComponent {
   itemsPerPage = 10;
   totalPages = 0;
   userId:any
+  dataSend: any
 
 
   ngOnInit(): void {
@@ -59,7 +50,7 @@ export class LeadlistComponent {
 
 
   getPatients(){
-    this.api.patientsForAdmin().subscribe((res:any)=>{
+    this.api.getleadss().subscribe((res:any)=>{
       this.patientsCount = res.data;
       this.totalPages = Math.ceil(this.patientsCount.length / this.itemsPerPage);
       this.setPage(1); // Initialize with the first page
@@ -88,46 +79,30 @@ export class LeadlistComponent {
 
   id:any;
   patientByIdData:any=[];
-patientById(data: any) {
+  patientById(data: any) {
   this.id = data;
   this.api.patientById(data).subscribe((res: any) => {
     this.patientByIdData = res.data[0];
   })
 }
+toggleVerified(data: any) {
+  var id = data.id;
+  this.dataSend = {
+    leadStatus: !data.leadStatus // Toggle between true and false
+  };
 
-// patientDelete(itemDlt: any): void {
-//   this.api.deletepatient(itemDlt.id).subscribe(
-//     () => {
-//       window.location.reload()
-//     },
-//     (error) => {
-//       console.error('Error deleting dispatched', error);
-//     }
-//   );
-// }
-
-
-
-
-patientDelete(itemDlt: any) {
-  this.api.deletepatient(itemDlt.id).subscribe((res: any) => {
-    if (res.success) {
-      this.patientsCount = res.data;
-      this.swet.SucessToast(`${res.data[0].name}'Deleted successfully!`);
-      // Close the modal using plain JavaScript
-      const modalElement = document.getElementById('deleteModal');
-      if (modalElement) {
-        const bootstrapModal = new (window as any).bootstrap.Modal(modalElement); // Use bootstrap from window object
-        bootstrapModal.hide(); // Hide modal after success
+  this.api.leadsttsusupdated(id, this.dataSend).subscribe(res => {
+    if (res) {
+      this.getPatients();
+      const accountStatus = res.data.leadStatus;
+      const doctorName = res.data.name;
+      if (accountStatus) {
+        this.swet.SucessToast(`${doctorName} Lead approved successfully`);
+      } else {
+        this.swet.SucessToast(`${doctorName} Lead disapproved successfully`);
       }
-
-      window.location.reload(); // Reload the page to refresh the data
-     
-    } else {
-      this.swet.SucessToast(`${res.message}`);
     }
   });
 }
-
 
 }

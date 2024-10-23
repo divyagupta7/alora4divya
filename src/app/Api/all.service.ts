@@ -258,4 +258,15 @@ postDoctors(data: any) {
     return this.post(superAdminEndPoints.addleads, data)
    }
 
+   getleadss(){
+    return this.get(superAdminEndPoints.getleads)
+   }
+
+   leadsttsusupdated(id:any, data:any){
+    return this.patch(superAdminEndPoints.updateleadestatusleads + id , data)
+   }
+
+
+  
+
 }

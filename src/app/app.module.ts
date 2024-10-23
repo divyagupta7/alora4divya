@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { AddleadComponent } from './addlead/addlead.component';
+import { CommonModule } from '@angular/common';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { AddleadComponent } from './addlead/addlead.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    CommonModule
     // ToastrModule.forRoot(),  
   ],
   providers: [],

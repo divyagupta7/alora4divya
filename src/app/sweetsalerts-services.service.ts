@@ -37,7 +37,7 @@ export class SweetsalertsServicesService {
       position: 'top-end',
       showConfirmButton: false,
       timer: 2000,
-      title: 'Success!',
+      // title: 'Success!',
       text: message, // Display the passed message here
       icon: 'success',
       color: 'white',
