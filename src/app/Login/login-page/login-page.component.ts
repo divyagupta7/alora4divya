@@ -76,7 +76,7 @@ export class LoginPageComponent implements OnInit {
     } else if (res.role === 'patient') {
       localStorage.setItem('patient_token', res.token);
       localStorage.setItem('patient_name', res.name);
-      this.router.navigate(["/nurse/nurse_dashboard"]);
+      this.router.navigate(["/patient/patient_dashboard"]);
     }
   }
 
