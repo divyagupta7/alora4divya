@@ -39,6 +39,8 @@ export const superAdminEndPoints = {
     getleads: `${baseUrl}leads`,
     updateleadestatusleads: `${baseUrl}lead/leadstatusupdate/`,
     leadupdate: `${baseUrl}lead/`,
-     leadupdatedata: `${baseUrl}lead/`
+     leadupdatedata: `${baseUrl}lead/`,
+     caregivercreate: `${baseUrl}caregiver`
+   
 
 }

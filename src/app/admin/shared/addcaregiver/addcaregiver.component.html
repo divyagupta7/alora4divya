@@ -1,44 +1,45 @@
 <div class="container-fluid mt-5">
-    <div class="col-lg-12 col-md-12 text-white  gap-2  mt-2 " style=" white-space: wrap ;background-color: #438EB9; height: 40px; ">
-        <h5 class="mt-3  p-2  "> Create New Caregiver </h5>
-     </div>
-    <div class="card mt-5 ">
-        <div class="card-body ">
-            <form class="row g-3">
-                <div class="col-md-6">
-                  <label for="" class="form-label fw-bold" style="color: rgb(97, 95, 95); ">Caregiver Name</label>
-                  <input type="text" class="form-control" id="inputEmail4" placeholder="Name" formControlName="  ">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label fw-bold" style="color: rgb(97, 95, 95); ">Certification</label>
-                    <input type="text" class="form-control" id="inputEmail4" formControlName="  ">
-                  </div>
-              
-                <div class="col-md-6">
-                  <label for="inputAddress" class="form-label fw-bold" style="color: rgb(97, 95, 95); "> Attach Certification Documente</label>
-                  <input type="file" class="form-control" id="inputAddress" placeholder="Personal Care" formControlName="  ">
-                </div>
-                <div class="col-md-6">
-                  <label for="inputAddress2" class="form-label fw-bold" style="color: rgb(97, 95, 95); "> Certification Expiration Date</label>
-                  <input type="date" class="form-control" id="inputAddress2" placeholder="" formControlName="  ">
-                </div>
-                <div class="col-md-6">
-                  <label for="inputCity" class="form-label fw-bold" style="color: rgb(97, 95, 95); "> Set Reminder (Days before expiration)</label>
-                  <input type="number" class="form-control" id="inputCity" formControlName="  ">
-                </div>
-                <div class="col-md-6">
-                  <label for="inputCity" class="form-label fw-bold" style="color: rgb(97, 95, 95); "> Electronic Signature</label>
-                  <input type="file" class="form-control" id="inputCity" formControlName="  ">
-                </div>
-                <div class="col-md-6">
-                  <label for="inputCity" class="form-label fw-bold" style="color: rgb(97, 95, 95); ">  Caregiver Notes </label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" formControlName="  "></textarea>
-                </div>
-      
-                <div class="col-12 d-flex justify-content-end fw-bold">
-                  <button type="submit" class="btn btn-primary">Save</button>
-                </div>
-              </form>  
+  <div class="col-lg-12 col-md-12 text-white  gap-2  mt-2 "
+    style=" white-space: wrap ;background-color: #438EB9; height: 40px; ">
+    <h5 class="mt-3  p-2  "> Create New Caregiver </h5>
+  </div>
+  <div class="card mt-5 ">
+    <div class="card-body ">
+      <form class="row g-3" [formGroup]="caregiverForm">
+        <div class="col-md-6">
+          <label for="caregiverName" class="form-label fw-bold" style="color: rgb(97, 95, 95); ">Caregiver Name</label>
+          <input type="text" class="form-control" id="caregiverName" placeholder="Name" formControlName="caregiverName">
         </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label fw-bold" style="color: rgb(97, 95, 95); ">Email</label>
+          <input placeholder="email" type="email" class="form-control" id="email" formControlName="email">
+        </div>
+        <div class="col-md-6">
+          <label for="password" class="form-label fw-bold" style="color: rgb(97, 95, 95); ">Password</label>
+          <input placeholder="password" type="password" class="form-control" id="password" formControlName="password">
+        </div>
+
+        <div class="col-md-6">
+          <label for="address" class="form-label fw-bold" style="color: rgb(97, 95, 95); ">Address</label>
+          <input placeholder="address" type="text" class="form-control" id="address" formControlName="address">
+        </div>
+
+        <div class="col-md-6">
+          <label for="electronicSignature" class="form-label fw-bold" style="color: rgb(97, 95, 95); ">Electronic
+            Signature</label>
+          <input type="file"  (change)="Onupload($event)" class="form-control" id="electronicSignature" formControlName="electronicSignature">
+        </div>
+        <div class="col-md-6">
+          <label for="caregiverNote" class="form-label fw-bold" style="color: rgb(97, 95, 95); ">Caregiver Notes</label>
+          <textarea placeholder="Caregiver Note" class="form-control" id="caregiverNote" rows="2"
+            formControlName="caregiverNote"></textarea>
+        </div>
+
+
+        <div class="col-12 d-flex justify-content-end fw-bold">
+          <button type="submit" (click)="caregivercreted()" class="btn btn-primary">Save</button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>

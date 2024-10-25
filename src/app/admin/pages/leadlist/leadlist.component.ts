@@ -111,9 +111,9 @@ toggleVerified(data: any) {
       const accountStatus = res.data.leadStatus;
       const doctorName = res.data.name;
       if (accountStatus) {
-        this.swet.SucessToast(`${doctorName} Lead approved successfully`);
+        this.swet.SucessToast(`${doctorName} Lead Action Successfully`);
       } else {
-        this.swet.SucessToast(`${doctorName} Lead disapproved successfully`);
+        this.swet.SucessToast(`${doctorName} Lead Action Sccessfully`);
       }
     }
   });

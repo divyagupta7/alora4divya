@@ -291,6 +291,15 @@ public leadData: any;
   }
 
 
+
+
+  createcaregiver(data: any) {
+    const headers = new HttpHeaders({
+    });
+    return this.http.post(superAdminEndPoints.caregivercreate, data, { headers });
+  }
+
+
   //  putleadupdate(id:any, data:any){
   //   return this.put(superAdminEndPoints.leadupdatedata + id ,data )
   //  }
