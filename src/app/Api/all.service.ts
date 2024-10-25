@@ -266,16 +266,22 @@ postDoctors(data: any) {
     return this.patch(superAdminEndPoints.updateleadestatusleads + id , data)
    }
 
+
   
 public leadData: any;
 
 
    leadupdate(id:any){
+    const adminId = localStorage.getItem('id');
     return this.get(superAdminEndPoints.leadupdate + id )
    }
 
 
 
+   patientByID(id:any){
+    const patientId = localStorage.getItem('patient_id');
+    return this.get(superAdminEndPoints.leadupdate + patientId )
+   }
 
    putleadupdate(id:any, data:any) {
     const headers = new HttpHeaders({

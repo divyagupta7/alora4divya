@@ -7,6 +7,9 @@ import { PatientHomeComponent } from './pages/patient-home/patient-home.componen
 import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
 import { PatientNurseAlotedComponent } from './pages/patient-nurse-aloted/patient-nurse-aloted.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MyProfileComponent } from './pages/my-profile/my-profile.component';
+import { CarePlanComponent } from './pages/care-plan/care-plan.component';
+import { DocumentsComponent } from './pages/documents/documents.component';
 
 
 @NgModule({
@@ -14,7 +17,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PatientComponent,
     PatientHomeComponent,
     PatientDashboardComponent,
-    PatientNurseAlotedComponent
+    PatientNurseAlotedComponent,
+    MyProfileComponent,
+    CarePlanComponent,
+    DocumentsComponent
   ],
   imports: [
     CommonModule,
