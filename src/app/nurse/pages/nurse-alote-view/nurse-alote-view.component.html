@@ -1,129 +1,87 @@
-
-<section>
-    
-    <div class="container">
-        
-        <div class="row mt-3 ">
-            <h2 style="background-color: #438eb9; color: white;">View Patient Allotted</h2>
-            <hr>
-          
-            
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2">
-                
-                <div class="table-responsive">
-                    <table class="table table-hover" style="text-wrap: nowrap;">
-                      <thead>
-                        <tr>
-                          <th>Sr No</th>
-                          <th>Patient Name</th>
-                          <!-- <th>Nurse Name</th> -->
-                          <th>From Date</th>
-                          <th>To Date</th>
-                          <!-- <th>Action</th> -->
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr *ngFor="let admin of rehan; let i = index">
-                          <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td> 
-                          <td>{{ admin.patientName }}</td>
-                          <!-- <td>{{ admin.nurseName }}</td> -->
-                          <td>{{ admin.formDate }}</td>
-                          <td>{{ admin.toDate }}</td>
-                          <td>  
-                            <!-- <button (click)="allotedById(admin.id)" class="btn btn-primary bg-transparent m-1" style="color: #438eb9;" data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="fa-solid fa-pen-to-square"></i></button> -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div class="modal-dialog">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Allot</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <form #userForm="ngForm" (ngSubmit)="updateNurse()">
-                                      <div class="container mt-2 mb-3">
-                                        <div class="row">
-                                          <div class="col-lg-6">
-                                            <label for="name">Patient Name:</label>
-                                            <input type="text" class="form-control" id="name" [(ngModel)]="nurseByIdData.patientName" name="name" required />
-                                          </div>
-<!--                                           
-                                          <div class="col-lg-6">
-                                            <label for="mobileNumber">Nurse Name</label>
-                                            <input type="text" class="form-control" id="mobileNumber" [(ngModel)]="nurseByIdData.nurseName" name="mobileNumber" required />
-                                          </div> -->
-                                        </div>
-                            
-                                        <div class="row">
-                                          <div class="col-lg-6">
-                                            <label for="formDate">From Date</label>
-                                            <input type="date" class="form-control" id="formDate" [(ngModel)]="nurseByIdData.formDate" name="formDate" required />
-                                          </div>
-                                        </div>
-
-                                        <div class="row"></div>
-                                          <div class="col-lg-6">
-                                            <label for="toDate">To Date</label>
-                                            <input type="date" class="form-control" id="toDate" [(ngModel)]="nurseByIdData.toDate" name="toDate" required />
-                                          </div>
-                                        </div>
-                                        
-                                      
-                                      
-                                      <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Save changes</button>
-                                      </div>
-                                      
-                                      
-                                    </form>
-                                    
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                           
-                            <!-- <button (click)="allotedById(admin.id)" class="btn btn-danger bg-transparent m-1" style="color: red;" data-bs-toggle="modal" data-bs-target="#deleteModal" ><i class="fa-solid fa-trash"></i></button>
-                            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div class="modal-dialog">
-                                <div class="modal-content">
-                                  
-                                  <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Allot</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                    Are you sure want to delete {{ nurseByIdData.name }} ?
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                 <button type="submit" (click)="allotsDeleted(nurseByIdData)" class="btn btn-primary">Save changes</button>
-                                  
-                  <button type="submit" class="btn btn-primary">Save changes</button>
-
-                                </div>
-                                </div>
-                              </div>
-                            </div> -->
-                          </td>
-                        </tr>
-
-                       
-    
-                      </tbody>
-                    </table>
-                  </div>
-                  
-                  <div class="pagination-controls">
-                    <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
-                    <span>Page {{ currentPage }} of {{ totalPages }}</span>
-                    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
-                  </div>
-                  
-                
-            </div>
-            
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-10 offset-md-1"
+      style="box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;">
+      <div class="">
+        <div class="card-header" style="font-weight: bold; font-size: 20px">
+          Personal Information
         </div>
-        
+        <form>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="col-sm-12 col-md-3" style="line-height: 2rem; height: 190px;">
+                  <label class="ms-4" for="specificSizeSelect"> IMAGE:</label>
+                  <div class="image-upload-wrap mb-3 ms-4" style="width: 90%;">
+                    <div class="row">
+                      <div class="col-md-6 text-center">
+                        <img 
+                          style=" border-radius: 70px; height: 120px; width: 150px; margin-right: 10px; padding-bottom: 10px;">
+                        <input type="file" class="form-control" style="width: 100px;"
+                          formControlName="profile">
+                      </div>
+                    </div>
+                    <div class="drag-text">
+                      <h3 style="opacity: 0;">Drag and drop a file or select</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6" style="margin-top: 40px;">
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="caregiverName">Caregiver Name</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control form-control-sm" id="caregiverName" placeholder="Caregiver Name"
+                      formControlName="caregiverName" style="width: 100%" />
+                  </div>
+                </div>
+                <div class="form-group row mt-2">
+                  <div class="col-md-6">
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" class="form-control form-control-sm" id="email" placeholder="Email"
+                      formControlName="email" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="card-body">
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="address">Address</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control form-control-sm" id="address" placeholder="Address"
+                    formControlName="address" />
+                </div>
+              </div>
+              <div class="form-group row mt-2">
+                <div class="col-md-6">
+                  <label for="caregiverNote">Caregiver Note</label>
+                </div>
+                <div class="col-md-6">
+                  <textarea class="form-control form-control-sm" id="caregiverNote" placeholder="Caregiver Note"
+                    formControlName="caregiverNote" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="form-group row mt-2">
+                <div class="col-md-6">
+                  <label for="password">Password</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="password" class="form-control form-control-sm" id="password" placeholder="Password"
+                    formControlName="password" />
+                </div>
+              </div>
+              <button class="btn btn-success mt-2" type="submit">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-    
-</section> 
+  </div>
+</div>
