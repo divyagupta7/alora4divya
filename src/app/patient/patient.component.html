@@ -55,19 +55,19 @@
             </li>
             <li class="nav-item">
                 <a routerLink="/patient/patient_care_plan" class="nav-link unique-nav-link">
-                    <i class="fas fa-home unique-icon"></i>
+                    <i class="fas fa-file unique-icon"></i>
                     <span class="unique-nav-text">Care Plan</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a routerLink="/patient/patient_profile" class="nav-link unique-nav-link">
-                    <i class="fas fa-home unique-icon"></i>
+                    <i class="fas fa-user unique-icon"></i>
                     <span class="unique-nav-text">My Profile</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a routerLink="/patient/patient_documents" class="nav-link unique-nav-link">
-                    <i class="fas fa-home unique-icon"></i>
+                    <i class="fas fa-file unique-icon"></i>
                     <span class="unique-nav-text">Documents</span>
                 </a>
             </li>
@@ -77,33 +77,7 @@
                     <span class="unique-nav-text">My Care Giver</span> 
                 </a>
             </li>    -->
-            <div class="accordion" id="helpAccordion">
-                <li class="nav-item">
-                    <a class="nav-link unique-nav-link collapsed" data-bs-toggle="collapse" href="#adminMenu1"
-                        role="button" aria-expanded="false" aria-controls="adminMenu1">
-
-                        <i class="fa-solid fa-circle-question unique-icon"></i>
-                        <span class="unique-nav-text">Help</span>
-                        <i class="fas fa-chevron-down unique-chevron"></i>
-                    </a>
-                    <div class="collapse unique-submenu" id="adminMenu1" data-bs-parent="#helpAccordion">
-                        <ul class="flex-column nav">
-                            <li class="nav-item">
-                                <a routerLink="/Admin/for_new_home_care" class="nav-link unique-nav-link">
-                                    For New Home Care Agency
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a routerLink="/Admin/faq" class="nav-link unique-nav-link">
-                                    Faq
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
-
-            </div>
+           
             <li class="nav-item">
                 <a (click)="logouts()" class="nav-link unique-nav-link">
                     <i class="fas fa-right-from-bracket unique-icon"></i>
