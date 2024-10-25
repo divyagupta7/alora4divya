@@ -29,6 +29,7 @@ export class LeadlistComponent {
   dataSend: any
 
 
+
   ngOnInit(): void {
     const userIdString = localStorage.getItem('id');
     this.userId = userIdString ? parseInt(userIdString, 10) : null;
@@ -44,19 +45,32 @@ export class LeadlistComponent {
       window.location.reload()
     }, (error) => {
       console.error('Error updating user', error);
-      // Handle error
     });
   }
+
+  filteredleads: any[] = [];
+  searchTerm: string = '';
 
 
   getPatients(){
     this.api.getleadss().subscribe((res:any)=>{
-      this.patientsCount = res.data;
+      this.patientsCount = res.data.reverse();
+      this.filteredleads = [...this.patientsCount];
       this.totalPages = Math.ceil(this.patientsCount.length / this.itemsPerPage);
-      this.setPage(1); // Initialize with the first page
+      this.setPage(1); 
       console.log('patient count', this.patientsCount)
     })
   }
+
+  filterClients() {
+    this.filteredleads = this.patientsCount.filter(client =>
+      client.servicetype.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      client.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      client.email.toLowerCase().includes(this.searchTerm.toLowerCase())||
+      client.note.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  }
+
 
   setPage(page: number) {
     this.currentPage = page;

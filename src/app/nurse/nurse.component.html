@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse " id="collapsibleNavbar">
             <ul class="navbar-nav navbarul">
                 <li class="nav-item" style="border-right: 1px solid gray;">
-                    <a class="nav-link"  >Hii, {{nursename}}</a>
+                    <a class="nav-link"  >Hii, {{caregivername}}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="cursor: pointer;" (click)="logouts()">LogOut</a>
@@ -46,12 +46,12 @@
                     <span class="unique-nav-text">Collapse</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a routerLink="/nurse/nurse_home" class="nav-link unique-nav-link">
                     <i class="fas fa-home unique-icon"></i>
                     <span class="unique-nav-text">Home</span>
                 </a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a routerLink="/nurse/nurse_dashboard" class="nav-link unique-nav-link">
                     <i class="fas fa-tachometer-alt unique-icon"></i>
@@ -71,7 +71,7 @@
                 <a routerLink="/nurse/nurse_alote_view" class="nav-link unique-nav-link">
               
                     <i class="fas fa-solid fa-user-plus unique-icon"></i>
-                    <span class="unique-nav-text">My Patient</span>
+                    <span class="unique-nav-text">My Client</span>
                 </a>
             </li>
 
@@ -79,7 +79,7 @@
                 <a routerLink="/nurse/add_report" class="nav-link unique-nav-link">
               
                     <i class="fas fa-solid fa-user-plus unique-icon"></i>
-                    <span class="unique-nav-text">Report</span>
+                    <span class="unique-nav-text">Documente</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -142,7 +142,7 @@
           
         </ul>
     </div>
-    <div class="col-lg-10 col-md-10 mt-5">
+    <div class="col-lg-9 col-md-9 mt-5">
         
 <router-outlet></router-outlet>
         

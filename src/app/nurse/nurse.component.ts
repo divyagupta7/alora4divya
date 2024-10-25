@@ -11,9 +11,9 @@ export class NurseComponent {
   constructor(
     private route :Router
   ){
-    this.nursename=localStorage.getItem('nurse_name')
+    this.caregivername=localStorage.getItem('caregiver_name')
   }
-  nursename:any;
+  caregivername:any;
 
   toggleSidebar() {
     const sidebar = document.getElementById('sidebar');

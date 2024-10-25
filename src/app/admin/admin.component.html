@@ -5,19 +5,39 @@
                 onclick="toggleSidebar()">
                 <i class="fa-sharp fa-light fa-bars"></i>
             </button>
-
-
             <a> <img src="../../assets/74EB1EE2-13F5-4D86-99AE-A798B5CDABB1.png" style="width: 100px;"
                     class="card-img-top" alt="..."></a>
+
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="collapsibleNavbar">
             <ul class="navbar-nav navbarul">
+
                 <li class="nav-item" style="border-right: 1px solid gray;">
-                    <a class="nav-link">Hii, {{homecarename}}</a>
+                    <a class="nav-link">Hii, {{superadminname}}
+                    </a>
                 </li>
+                <li class="nav-item notification-icon" style="border-right: 1px solid gray;">
+                    <a class="nav-link" (click)="toggleNotificationDropdown()">
+                        <i class="fa fa-bell fs-5"></i> 
+                        <span *ngIf="newPatientsCount > 0" class="badge">{{ newPatientsCount }}</span>
+                    </a>
+                </li>
+                <div *ngIf="isNotificationDropdownVisible" class="notification-dropdown">
+                    <div class="dropdown-header">
+                      <h5 style="color: #5090bf;">New Notifications <button style="margin-left:113px; color: #5090bf; border: none;" (click)="closeNotificationDropdown()">
+                        <i class="fa fa-times"></i></button></h5>
+                    </div>
+                    <ul *ngIf="latestPatients.length > 0">
+                      <li *ngFor="let patient of latestPatients">
+                        Client Name={{ patient.name }} - {{ patient.id }} 
+                        Create Date={{patient.leadCreatedDate}}       
+                      </li>
+                    </ul>
+                    <p *ngIf="latestPatients.length === 0">No new notifications</p>
+                  </div>
                 <li class="nav-item">
                     <a class="nav-link" style="cursor: pointer;" (click)="logouts()">LogOut</a>
                 </li>
@@ -52,57 +72,37 @@
 
 
 
-<!-- 
-            <li class="nav-item">
-                <a class="nav-link unique-nav-link " data-bs-toggle="collapse" href="#adminMenu8" role="button"
-                    aria-expanded="false" aria-controls="adminMenu8">
-                    <i class="fa-duotone fa-solid fa-bed-pulse unique-icon"></i>
-                    <span class="unique-nav-text">Patient</span>
-                    <i class="fas fa-chevron-down unique-chevron"></i>
-                </a>
-                <div class="collapse unique-submenu" id="adminMenu8" data-bs-parent="#helpAccordion">
-                    <ul class="flex-column nav">
-                        <li class="nav-item">
-                            <a href="/Patient/PatientDemographicsAndReferrals.html" class="nav-link unique-nav-link">
-                                Patient Demographics And Referrals
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Patient/PatientChart.html" class="nav-link unique-nav-link">
-                                Patient
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Patient/Admitioninsurence.html" class="nav-link unique-nav-link">
-                                Admision , Insurance & piror Outh
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Patient/PatientCommunication.html" class="nav-link unique-nav-link">
-                                Patient Communication
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li> -->
+
 
 
 
             <li class="nav-item">
-                <a routerLink="/Admin/view_patients" class="nav-link unique-nav-link">
-                    <i class="fa-sharp fa-regular fa-bed-pulse unique-icon"></i>
-                    <span class="unique-nav-text">Patients</span>
-                </a>
-            </li>
 
-            <li class="nav-item">
                 <a routerLink="/Admin/Leadlist" class="nav-link unique-nav-link">
-                    <i class="fa-sharp fa-regular fa-bed-pulse unique-icon"></i>
+                    <!-- <i class="fa-sharp fa-regular fa-bed-pulse unique-icon"></i> -->
+                    <i class="fa-solid fa-users unique-icon"></i>
                     <span class="unique-nav-text">Lead List</span>
                 </a>
             </li>
-            
 
+
+
+            <li class="nav-item">
+                <a routerLink="/Admin/Client_view" class="nav-link unique-nav-link">
+                    <i class="fa-solid fa-user-plus unique-icon"></i>
+                    <span class="unique-nav-text">Client List</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a routerLink="/Admin/Caregiver_view" class="nav-link unique-nav-link">
+                    <i class="fa-solid fa-user-nurse unique-icon"></i>
+                    <span class="unique-nav-text">Care Giver List</span>
+                </a>
+            </li>
+
+
+            <!-- 
             <li class="nav-item">
                 <a class="nav-link unique-nav-link " data-bs-toggle="collapse" href="#adminMenu9" role="button"
                     aria-expanded="false" aria-controls="adminMenu9">
@@ -139,10 +139,10 @@
                        
                     </ul>
                 </div>
-            </li>
+            </li> -->
 
 
-
+            <!-- 
             <div class="accordion" id="adminAccor">
                 <li class="nav-item">
                     <a class="nav-link unique-nav-link" data-bs-toggle="collapse" href="#AR" role="button"
@@ -167,13 +167,15 @@
                         </ul>
                     </div>
                 </li>
-            </div>
-            <li class="nav-item">
+            </div> -->
+
+
+            <!-- <li class="nav-item">
                 <a routerLink="/Admin/clock_status" class="nav-link unique-nav-link">
                     <i class="fas fa-solid fa-clock-rotate-left unique-icon"></i>
                     <span class="unique-nav-text">Clock Status</span>
                 </a>
-            </li>
+            </li> -->
 
 
 

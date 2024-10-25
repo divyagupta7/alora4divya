@@ -7,11 +7,12 @@
   </div>
   <div class="row">
     <div class="col-md-6 col-12 mt-3">
-      <form class="form-inline mb-3" style="display: flex;">
+      <div class="form-inline mb-3" style="display: flex;">
         <label for="search" class="me-2 fw-bold ">Search:</label>
-        <input type="text" class="form-control mr-2  form-control-sm" id="search" placeholder="Search">
+
+        <input type="text"  [(ngModel)]="searchTerm" (input)="filterClients()"  class="form-control mr-2  form-control-sm" id="search" placeholder="Search">
         <button type="button" class="btn btn-filter"><i class="fas fa-filter"></i></button>
-      </form>
+      </div>
     </div>
     <div class="col-md-6 col-12">
       <div class="form-inline mb-3 float-md-end mt-2" style="display: flex; ">
@@ -38,27 +39,28 @@
           <th style="color: #4F99C6;">STATUS</th>
         </tr>
       </thead>
+
       <tbody style="text-wrap: nowrap;" class="">
-        <tr style="background-color: #f9f9f9;" *ngFor="let a of patientsCount;   let i = index">
+        <tr style="background-color: #f9f9f9;" *ngFor="let a of filteredleads;   let i = index">
           <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
           <td><a routerLink="/Admin/Clientprofile_view" style="text-decoration: none;">{{a.name}}</a></td>
           <td>{{a.email}}</td>
           <td>{{a.servicetype}}</td>
           <td>{{a.note}}</td>
-              <td>
-                <div class="pretty p-default p-thick p-pulse" *ngIf="a.leadStatus">
-                  <input type="checkbox" [checked]="true" (change)="toggleVerified(a)" />
-                  <div  class="state p-success-o">
-                    <label>Approved</label>
-                  </div>
-                </div>
-                <div class="pretty p-default p-thick p-pulse" *ngIf="!a.leadStatus">
-                  <input type="checkbox" [checked]="false" (change)="toggleVerified(a)" />
-                  <div  class="state p-warning-o">
-                    <label>Disapproved</label>
-                  </div>
-                </div>
-              </td>
+          <td>
+            <div class="pretty p-default p-thick p-pulse" *ngIf="a.leadStatus">
+              <input type="checkbox" [checked]="true" (change)="toggleVerified(a)" />
+              <div class="state p-success-o">
+                <label>Approved</label>
+              </div>
+            </div>
+            <div class="pretty p-default p-thick p-pulse" *ngIf="!a.leadStatus">
+              <input type="checkbox" [checked]="false" (change)="toggleVerified(a)" />
+              <div class="state p-warning-o">
+                <label>Disapproved</label>
+              </div>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>

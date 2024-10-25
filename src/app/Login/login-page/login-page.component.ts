@@ -41,7 +41,7 @@ export class LoginPageComponent implements OnInit {
       this.service.superAdminLogin(this.loginForm.value).subscribe({
         next: (res) => {
           // this.loading = false;
-          if (res.role === 'superadmin' || res.role === 'doctor' || res.role === 'nurse' || res.role === 'patient') {
+          if (res.role === 'superadmin' || res.role === 'doctor' || res.role === 'caregiver' || res.role === 'patient') {
             this.handleRoleBasedRedirection(res);
             // this.loginSuccess = true;  // Login success message
             // this.swet.SucessToast();
@@ -67,16 +67,16 @@ export class LoginPageComponent implements OnInit {
       localStorage.setItem('id', res.id);
       localStorage.setItem('superadmin_name', res.name);
       this.router.navigate(["/Admin/admin_dashboard"]);
-    } else if (res.role === 'nurse') {
-      localStorage.setItem('nurse_token', res.token);
+    } else if (res.role === 'caregiver') {
+      localStorage.setItem('caregiver_token', res.token);
       localStorage.setItem('id', res.id);
-      localStorage.setItem('nurse_name', res.name);
-      localStorage.setItem('doctorId', res.doctorId);
-      this.router.navigate(["/nurse/nurse_home"]);
+      localStorage.setItem('caregiver_name', res.name);
+      localStorage.setItem('caregiverid', res.doctorId);
+      this.router.navigate(["/nurse/nurse_dashboard"]);
     } else if (res.role === 'patient') {
       localStorage.setItem('patient_token', res.token);
       localStorage.setItem('patient_name', res.name);
-      this.router.navigate(["/patient/patient_home"]);
+      this.router.navigate(["/nurse/nurse_dashboard"]);
     }
   }
 
@@ -90,12 +90,12 @@ export class LoginPageComponent implements OnInit {
       this.loginForm.controls['email'].setValue('osmelvillarreal@gmail.com');
       this.loginForm.controls['password'].setValue('osmelvillarreal');
     }
-    else if (data === 'nurse') {
+    else if (data === 'caregiver') {
       // this.form.controls['mobileNumber'].setValue('+919644605330');
-      this.loginForm.controls['email'].setValue('nurse@gmail.com');
-      this.loginForm.controls['password'].setValue('nurse@123');
+      this.loginForm.controls['email'].setValue('mycaregiver@gmail.com');
+      this.loginForm.controls['password'].setValue('caregiver');
     }
-    else if (data === 'patient') {
+    else if (data === 'patient') {  
       // this.form.controls['mobileNumber'].setValue('+919644605330');
       this.loginForm.controls['email'].setValue('patient@gmail.com');
       this.loginForm.controls['password'].setValue('patient');

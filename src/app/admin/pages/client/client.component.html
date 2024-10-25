@@ -10,12 +10,15 @@
 
     <div class="row">
         <div class="col-md-6 col-12 mt-3">
-            <form class="form-inline mb-3" style="display: flex;">
+            <div class="form-inline mb-3" style="display: flex;">
                 <label for="search" class="me-2 fw-bold ">Search:</label>
-                <input type="text" class="form-control mr-2  form-control-sm" id="search" placeholder="Search"
-                    formControlName="  ">
+
+                <input type="text" [(ngModel)]="searchTerm" (input)="filterClients()"
+                    class="form-control mr-2  form-control-sm" id="search" placeholder="Search">
+
+
                 <button type="button" class="btn btn-filter"><i class="fas fa-filter"></i></button>
-            </form>
+            </div>
         </div>
         <div class="col-md-6 col-12">
             <div class="form-inline mb-3 float-md-end mt-2" style="display: flex; ">
@@ -36,6 +39,7 @@
                 <tr>
                     <th style="color: #4F99C6;">ID</th>
                     <th style="color: #4F99C6;">MEDICAID ID</th>
+                    <th style="color: #4F99C6;">IMAGE</th>
                     <th style="color: #4F99C6;">NAME</th>
                     <th style="color: #4F99C6;">EMAIL</th>
                     <th style="color: #4F99C6;">SERVICE TYPR</th>
@@ -49,15 +53,64 @@
                 </tr>
             </thead>
             <tbody style="text-wrap: nowrap;" class="">
-                <tr style="background-color: #f9f9f9;" *ngFor="let a of patientsCount;   let i = index">
+                <tr style="background-color: #f9f9f9;" *ngFor="let a of filteredClients;   let i = index">
                     <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
                     <td> {{a.medicaidId}} </td>
+
+
+                    <!-- <td>
+                        <div class="mt-2">
+                            <img 
+                                style="width: 50px; border-radius: 30px; text-align: center;" 
+                                src="{{a.profile}}" 
+                                alt="img"
+                            />
+                        </div>
+                    </td> -->
+
+
+
+                    <td>
+                        <div class="mt-2">
+                            <img 
+                                style="width: 50px; border-radius: 30px; text-align: center;" 
+                                [src]="a.profile !== 'null' && a.profile ? a.profile : 'https://cdn-icons-png.flaticon.com/512/149/149071.png'" 
+                                alt="img"
+                            />
+                        </div>
+                    </td>
+                    
+
                     <td><a (click)="viewClientProfile(a.id)" style="text-decoration: none;">{{a.name}}</a></td>
                     <td>{{a.email}}</td>
                     <td>{{a.servicetype}}</td>
                     <td>{{a.note}}</td>
                     <td>{{a.address}}</td>
-                    <td>{{a.attachDoc}}</td>
+                
+                  
+
+
+                    <!-- <i class="fa-solid fa-download"></i> -->
+                        
+                        <!-- <td>
+                            <div class="d-flex justify-content-between">
+                                <button  (click)="uploadDocument(a.attachDoc)" class="iconbutton"
+                                    color="warn" >
+                                </button>
+                            </div>
+                        </td> -->
+
+                        <td>
+                            <div class="d-flex justify-content-between">
+                                <button (click)="uploadDocument(a.attachDoc)" class="iconbutton" style="color: #4F99C6; border: none;">
+                    <i class="fa-solid fa-download"></i>
+                </button>
+                            </div>
+                        </td>
+                 
+
+
+
                     <td class="text-center">{{a.docExpiryDate}}</td>
                     <td class="text-center">Set Reminder</td>
                     <td class="text-center">{{a.contactNumber}}</td>
