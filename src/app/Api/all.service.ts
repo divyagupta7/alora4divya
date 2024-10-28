@@ -299,6 +299,17 @@ public leadData: any;
     return this.http.post(superAdminEndPoints.caregivercreate, data, { headers });
   }
 
+  getcaregivers(){
+    return this.get(superAdminEndPoints.caregiverget)
+  }
+
+  addPlansss(data: any) {
+    const headers = new HttpHeaders({
+    });
+    return this.http.post(superAdminEndPoints.addPlans, data, { headers });
+  }
+
+ 
 
   //  putleadupdate(id:any, data:any){
   //   return this.put(superAdminEndPoints.leadupdatedata + id ,data )
@@ -317,12 +328,21 @@ public leadData: any;
     return this.get(superAdminEndPoints.getPlans)
   }
 
-  addPlans(data:any){
-    return this.post(superAdminEndPoints.Plans, data)
-  }
+ 
 
   deletePlans(id:any){
     return this.delete(superAdminEndPoints.deletePlans + id)
   }
+
+  getgetFacilitys(){
+    return this.get(superAdminEndPoints.getFacility)
+  }
+
+
+  addFacilitys(data:any){
+    return this.post(superAdminEndPoints.addFacility, data)
+   }
+  
+     
 
 }

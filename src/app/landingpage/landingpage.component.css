@@ -35,38 +35,33 @@
             text-decoration: underline;
         }
 
-.card {
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
+          /* Custom styles for list items */
+          .list-unstyled {
+            padding-left: 0; 
+        }
+        .list-unstyled li {
+            list-style-type: none; 
+            padding-left: 0; 
+            margin-left: 20px; 
+            
+        }
 
 .card.selected {
   border: 2px solid #007bff;
-  background-color: rgba(0,123,255,0.05);
+  /* or whatever styling you prefer for selected cards */
 }
 
-.plan-details ul li {
-  margin-bottom: 0.5rem;
+.selected-card {
+    border: 2px solid #003366 !important;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
 }
 
-.plan-stats p {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+.btn.selected {
+    background-color: #28a745 !important;
 }
 
-.card-title {
-  color: #007bff;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.form-check-input:checked {
-  background-color: #007bff;
-  border-color: #007bff;
+.card {
+    transition: all 0.3s ease;
 }

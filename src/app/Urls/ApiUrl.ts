@@ -41,7 +41,11 @@ export const superAdminEndPoints = {
     leadupdate: `${baseUrl}lead/`,
      leadupdatedata: `${baseUrl}lead/`,
      caregivercreate: `${baseUrl}caregiver`,
+     caregiverget: `${baseUrl}caregivers`,
      getPlans: `${baseUrl}plans`,
-     Plans: `${baseUrl}plan`,
+     addPlans: `${baseUrl}plan`,
      deletePlans: `${baseUrl}plan/`,
+     getFacility: `${baseUrl}facilitys`,
+     addFacility: `${baseUrl}facility`
+
 }

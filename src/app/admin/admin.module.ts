@@ -63,6 +63,8 @@ import { FacilityViewComponent } from './admin/facility-view/facility-view.compo
 import { AddFacilityComponent } from './admin/add-facility/add-facility.component';
 import { AddPlansComponent } from './admin/add-plans/add-plans.component';
 import { ViewPlansComponent } from './admin/view-plans/view-plans.component';
+import { AddCategoryComponent } from './admin/add-category/add-category.component';
+import { ViewCategoryComponent } from './admin/view-category/view-category.component';
 
 
 @NgModule({
@@ -126,7 +128,9 @@ import { ViewPlansComponent } from './admin/view-plans/view-plans.component';
     FacilityViewComponent,
     AddFacilityComponent,
     AddPlansComponent,
-    ViewPlansComponent
+    ViewPlansComponent,
+    AddCategoryComponent,
+    ViewCategoryComponent
   ],
   imports: [
     CommonModule,

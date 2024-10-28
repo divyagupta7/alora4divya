@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AllService } from 'src/app/Api/all.service';
 import { SweetsalertsServicesService } from 'src/app/sweetsalerts-services.service';
 
 @Component({
-  selector: 'app-leadlist',
-  templateUrl: './leadlist.component.html',
-  styleUrls: ['./leadlist.component.css']
+  selector: 'app-view-category',
+  templateUrl: './view-category.component.html',
+  styleUrls: ['./view-category.component.css']
 })
-export class LeadlistComponent { 
-  
-  updateForm!:FormGroup;  
+export class ViewCategoryComponent implements OnInit {
+    updateForm!:FormGroup;  
   constructor(
     private api:AllService,
     private route:Router,
@@ -38,22 +38,22 @@ export class LeadlistComponent {
   }
 
 
-  updatePatient() {
-    this.api.updatePatientById(this.id, this.patientByIdData).subscribe((res: any) => {
-      console.log('Patient updated successfully', res);
-      this.swet.SucessToast(`Patient ${res.data.name} Update Successfully !`);
-      window.location.reload()
-    }, (error) => {
-      console.error('Error updating user', error);
-    });
-  }
+  // updatePatient() {
+  //   this.api.updatePatientById(this.id, this.patientByIdData).subscribe((res: any) => {
+  //     console.log('Patient updated successfully', res);
+  //     this.swet.SucessToast(`Patient ${res.data.name} Update Successfully !`);
+  //     window.location.reload()
+  //   }, (error) => {
+  //     console.error('Error updating user', error);
+  //   });
+  // }
 
   filteredleads: any[] = [];
   searchTerm: string = '';
 
 
   getPatients(){
-    this.api.getleadss().subscribe((res:any)=>{
+    this.api.getgetFacilitys().subscribe((res:any)=>{
       this.patientsCount = res.data.reverse();
       this.filteredleads = [...this.patientsCount];
       this.totalPages = Math.ceil(this.patientsCount.length / this.itemsPerPage);
@@ -91,33 +91,5 @@ export class LeadlistComponent {
     }
   }
 
-  id:any;
-  patientByIdData:any=[];
-  patientById(data: any) {
-  this.id = data;
-  this.api.patientById(data).subscribe((res: any) => {
-    this.patientByIdData = res.data[0];
-  })
-}
-
-toggleVerified(data: any) {
-  var id = data.id;
-  this.dataSend = {
-    leadStatus: !data.leadStatus // Toggle between true and false
-  };
-
-  this.api.leadsttsusupdated(id, this.dataSend).subscribe(res => {
-    if (res) {
-      this.getPatients();
-      const accountStatus = res.data.leadStatus;
-      const doctorName = res.data.name;
-      if (accountStatus) {
-        this.swet.SucessToast(`${doctorName} Lead Action Successfully`);
-      } else {
-        this.swet.SucessToast(`${doctorName} Lead Action Sccessfully`);
-      }
-    }
-  });
-}
 
 }
