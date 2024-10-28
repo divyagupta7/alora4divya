@@ -313,7 +313,8 @@ public leadData: any;
     return this.leadData;
   }
 
-
-  
+  getPlans(){
+    return this.get(superAdminEndPoints.getPlans)
+  }
 
 }
