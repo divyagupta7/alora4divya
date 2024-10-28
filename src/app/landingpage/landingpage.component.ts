@@ -22,7 +22,7 @@ export class LandingpageComponent implements OnInit {
 
   leadform!: FormGroup;
   showClientCards = false;
-  planDetails: PlanDetail[] = [ ];
+  planDetails: PlanDetail[] = [  ];
   
   constructor(private fb: FormBuilder,
     private service:AllService,
@@ -42,10 +42,7 @@ export class LandingpageComponent implements OnInit {
       name:['',Validators.required]  ,      
       email :['',Validators.required]   ,   
       servicetype :['',Validators.required],
-      note  :['',Validators.required]  ,    
-      personalCare: [false],
-      companionCare: [false],
-      respiteCare: [false]
+      note  :['',Validators.required],
     });
 
     this.getPlans();
@@ -57,8 +54,8 @@ export class LandingpageComponent implements OnInit {
 
   getPlans(){
     this.service.getPlans().subscribe((res:any)=>{
-      this.planDetails = res.data;
       console.log(res)
+      this.planDetails = res.data;
     })
   }
 
