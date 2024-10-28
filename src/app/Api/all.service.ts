@@ -317,4 +317,8 @@ public leadData: any;
     return this.get(superAdminEndPoints.getPlans)
   }
 
+  addPlans(data:any){
+    return this.post(superAdminEndPoints.addPlans, data)
+  }
+
 }

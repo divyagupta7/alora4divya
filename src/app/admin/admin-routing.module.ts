@@ -56,6 +56,8 @@ import { ClientprofileComponent } from './pages/clientprofile/clientprofile.comp
 import { AddclientComponent } from './shared/addclient/addclient.component';
 import { AddcaregiverComponent } from './shared/addcaregiver/addcaregiver.component';
 import { LeadlistComponent } from './pages/leadlist/leadlist.component';
+import { AddFacilityComponent } from './admin/add-facility/add-facility.component';
+import { AddPlansComponent } from './admin/add-plans/add-plans.component';
 
 const routes: Routes = [
   { path: '', component: AdminComponent,
@@ -285,8 +287,15 @@ const routes: Routes = [
       {
         path:'Leadlist',
         component:LeadlistComponent
+      },
+      {
+        path:'add_facility',
+        component:AddFacilityComponent
+      },
+      {
+        path:'add_plans',
+        component:AddPlansComponent
       }
-    
     
     ]
 
