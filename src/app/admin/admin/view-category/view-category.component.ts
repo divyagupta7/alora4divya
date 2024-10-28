@@ -1,21 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AllService } from 'src/app/Api/all.service';
 import { SweetsalertsServicesService } from 'src/app/sweetsalerts-services.service';
 
 @Component({
-  selector: 'app-facility-view',
-  templateUrl: './facility-view.component.html',
-  styleUrls: ['./facility-view.component.css']
+  selector: 'app-view-category',
+  templateUrl: './view-category.component.html',
+  styleUrls: ['./view-category.component.css']
 })
-export class FacilityViewComponent implements OnInit {
-
-
-
-
-
-  updateForm!:FormGroup;  
+export class ViewCategoryComponent implements OnInit {
+    updateForm!:FormGroup;  
   constructor(
     private api:AllService,
     private route:Router,
@@ -95,32 +91,5 @@ export class FacilityViewComponent implements OnInit {
     }
   }
 
-  // id:any;
-  // patientByIdData:any=[];
-//   patientById(data: any) {
-//   this.id = data;
-//   this.api.patientById(data).subscribe((res: any) => {
-//     this.patientByIdData = res.data[0];
-//   })
-// }
-// toggleVerified(data: any) {
-//   var id = data.id;
-//   this.dataSend = {
-//     leadStatus: !data.leadStatus // Toggle between true and false
-//   };
-
-//   this.api.leadsttsusupdated(id, this.dataSend).subscribe(res => {
-//     if (res) {
-//       this.getPatients();
-//       const accountStatus = res.data.leadStatus;
-//       const doctorName = res.data.name;
-//       if (accountStatus) {
-//         this.swet.SucessToast(`${doctorName} Lead Action Successfully`);
-//       } else {
-//         this.swet.SucessToast(`${doctorName} Lead Action Sccessfully`);
-//       }
-//     }
-//   });
-// }
 
 }

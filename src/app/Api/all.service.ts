@@ -324,6 +324,21 @@ public leadData: any;
     return this.get(superAdminEndPoints.getPlans)
   }
 
+ 
+
+  deletePlans(id:any){
+    return this.delete(superAdminEndPoints.deletePlans + id)
+  }
+
+  getgetFacilitys(){
+    return this.get(superAdminEndPoints.getFacility)
+  }
+
+
+  addFacilitys(data:any){
+    return this.post(superAdminEndPoints.addFacility, data)
+   }
   
+     
 
 }

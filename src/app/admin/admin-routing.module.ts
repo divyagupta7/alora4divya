@@ -58,6 +58,11 @@ import { AddcaregiverComponent } from './shared/addcaregiver/addcaregiver.compon
 import { LeadlistComponent } from './pages/leadlist/leadlist.component';
 import { AddFacilityComponent } from './admin/add-facility/add-facility.component';
 import { AddPlansComponent } from './admin/add-plans/add-plans.component';
+import { ViewPlansComponent } from './admin/view-plans/view-plans.component';
+import { FacilityViewComponent } from './admin/facility-view/facility-view.component';
+import { ViewCategoryComponent } from './admin/view-category/view-category.component';
+import { AddCategoryComponent } from './admin/add-category/add-category.component';
+
 
 const routes: Routes = [
   { path: '', component: AdminComponent,
@@ -293,8 +298,24 @@ const routes: Routes = [
         component:AddFacilityComponent
       },
       {
+        path:'view_facility',
+        component:FacilityViewComponent
+      },
+      {
         path:'add_plans',
         component:AddPlansComponent
+      },
+      {
+        path:'view_plans',
+        component:ViewPlansComponent
+      },
+      {
+        path:'view_category',
+        component:ViewCategoryComponent
+      },
+      {
+        path:'add_category',
+        component:AddCategoryComponent
       }
     
     ]
