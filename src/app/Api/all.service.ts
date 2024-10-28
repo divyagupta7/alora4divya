@@ -299,6 +299,13 @@ public leadData: any;
     return this.http.post(superAdminEndPoints.caregivercreate, data, { headers });
   }
 
+  addPlansss(data: any) {
+    const headers = new HttpHeaders({
+    });
+    return this.http.post(superAdminEndPoints.addPlans, data, { headers });
+  }
+
+ 
 
   //  putleadupdate(id:any, data:any){
   //   return this.put(superAdminEndPoints.leadupdatedata + id ,data )
@@ -317,8 +324,6 @@ public leadData: any;
     return this.get(superAdminEndPoints.getPlans)
   }
 
-  addPlans(data:any){
-    return this.post(superAdminEndPoints.addPlans, data)
-  }
+  
 
 }

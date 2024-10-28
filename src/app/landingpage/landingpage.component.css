@@ -34,3 +34,15 @@
         .learn-more:hover {
             text-decoration: underline;
         }
+
+
+          /* Custom styles for list items */
+          .list-unstyled {
+            padding-left: 0; 
+        }
+        .list-unstyled li {
+            list-style-type: none; 
+            padding-left: 0; 
+            margin-left: 20px; 
+            
+        }

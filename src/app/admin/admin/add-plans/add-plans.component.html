@@ -4,53 +4,48 @@
 style=" white-space: wrap ;background-color: #438EB9; height: 40px; ">
 <h5 class="mt-3  p-2">Create New Plan </h5>
 </div>
-<form [formGroup]="addPlansForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="addPlansForm">
     <div class="row mt-3">
         <div class="col-md-6">
             <label for="planName">Plan Name</label>
-            <input type="text" class="form-control" formControlName="planName">
-            <div class="text-danger" *ngIf="addPlansForm.get('planName')?.invalid && addPlansForm.get('planName')?.touched">
-                <small *ngIf="addPlansForm.get('planName')?.errors?.['required']">Plan name is required</small>
-            </div>
+            <input type="text" class="form-control" formControlName="planName" placeholder="Plan Name">
+           
         </div>
         <div class="col-md-6">
             <label for="facility">Facility</label>
-            <input type="text" class="form-control" formControlName="facility">
-            <div class="text-danger" *ngIf="addPlansForm.get('facility')?.invalid && addPlansForm.get('facility')?.touched">
-                <small *ngIf="addPlansForm.get('facility')?.errors?.['required']">Facility is required</small>
-            </div>
+            <input placeholder="Facility" type="text" class="form-control" formControlName="facility">
         </div>
     </div>
+
+
+ 
+   
+
 
     <div class="row mt-3">
         <div class="col-md-6">
             <label for="beforeExpiry">Before Expiry</label>
-            <input type="date" class="form-control" formControlName="beforeExpiry">
-            <div class="text-danger" *ngIf="addPlansForm.get('beforeExpiry')?.invalid && addPlansForm.get('beforeExpiry')?.touched">
-                <small *ngIf="addPlansForm.get('beforeExpiry')?.errors?.['required']">Before expiry date is required</small>
-            </div>
+            <input type="date" class="form-control" formControlName="beforeExpiry" placeholder="Before Expiry">
+            
         </div>
         <div class="col-md-6">
             <label for="afterExpiry">After Expiry</label>
-            <input type="date" class="form-control" formControlName="afterExpiry">
-            <div class="text-danger" *ngIf="addPlansForm.get('afterExpiry')?.invalid && addPlansForm.get('afterExpiry')?.touched">
-                <small *ngIf="addPlansForm.get('afterExpiry')?.errors?.['required']">After expiry date is required</small>
-            </div>
+            <input type="date" class="form-control" formControlName="afterExpiry" 
+            >
         </div>
     </div>
+
 
     <div class="row mt-3">
+    
         <div class="col-md-6">
-            <label for="planStatus">Plan Status</label>
-            <input type="text" class="form-control" formControlName="planStatus">
-            <div class="text-danger" *ngIf="addPlansForm.get('planStatus')?.invalid && addPlansForm.get('planStatus')?.touched">
-                <small *ngIf="addPlansForm.get('planStatus')?.errors?.['required']">Plan status is required</small>
-            </div>
+            <label for="planStatus">Image</label>
+            <input type="file" (change)="Onupload($event)" class="form-control" formControlName="image" >
+            
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary mt-3">Submit</button>
-    
+    <button (click)="onSubmit()" class="btn btn-primary mt-3" >Submit</button>
 </form>
 
 </div>
