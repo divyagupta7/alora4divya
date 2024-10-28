@@ -15,6 +15,9 @@ export class NurseComponent {
   }
   caregivername:any;
 
+
+
+
   toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
     if (sidebar) {

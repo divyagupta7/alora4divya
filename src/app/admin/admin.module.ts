@@ -59,6 +59,10 @@ import { ClientprofileComponent } from './pages/clientprofile/clientprofile.comp
 import { AddclientComponent } from './shared/addclient/addclient.component';
 import { AddcaregiverComponent } from './shared/addcaregiver/addcaregiver.component';
 import { LeadlistComponent } from './pages/leadlist/leadlist.component';
+import { FacilityViewComponent } from './admin/facility-view/facility-view.component';
+import { AddFacilityComponent } from './admin/add-facility/add-facility.component';
+import { AddPlansComponent } from './admin/add-plans/add-plans.component';
+import { ViewPlansComponent } from './admin/view-plans/view-plans.component';
 
 
 @NgModule({
@@ -118,7 +122,11 @@ import { LeadlistComponent } from './pages/leadlist/leadlist.component';
     ClientprofileComponent,
     AddclientComponent,
     AddcaregiverComponent,
-    LeadlistComponent
+    LeadlistComponent,
+    FacilityViewComponent,
+    AddFacilityComponent,
+    AddPlansComponent,
+    ViewPlansComponent
   ],
   imports: [
     CommonModule,
