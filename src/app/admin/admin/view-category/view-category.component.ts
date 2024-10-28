@@ -62,6 +62,19 @@ export class ViewCategoryComponent implements OnInit {
     })
   }
 
+  // getfcategory(){
+  //   this.api.getfacilitycategorysss().subscribe((res:any)=>{
+  //     this.patientsCount = res.data.reverse();
+  //     this.filteredleads = [...this.patientsCount];
+  //     this.totalPages = Math.ceil(this.patientsCount.length / this.itemsPerPage);
+  //     this.setPage(1); 
+  //     console.log('patient count', this.patientsCount)
+  //   })
+  // }
+
+
+  
+
   filterClients() {
     this.filteredleads = this.patientsCount.filter(client =>
       client.servicetype.toLowerCase().includes(this.searchTerm.toLowerCase()) ||

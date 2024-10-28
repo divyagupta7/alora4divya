@@ -45,6 +45,9 @@ export const superAdminEndPoints = {
      addPlans: `${baseUrl}plan`,
      deletePlans: `${baseUrl}plan/`,
      getFacility: `${baseUrl}facilitys`,
-     addFacility: `${baseUrl}facility`
+     addFacility: `${baseUrl}facility`,
+     getfacilitycategorys: `${baseUrl}facilitycategorys`,
+     addfacilitycategorys: `${baseUrl}facilitycategory`
+
 
 }
