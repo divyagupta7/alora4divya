@@ -16,4 +16,9 @@ export class CaregiverComponent {
     this.route.navigate(["/Admin/Addcaregiver"]);
   }
 
+
+  uploadDocument(id:any){
+    console.log(id);
+    window.open(id)
+    }
 }
