@@ -58,6 +58,8 @@ import { AddcaregiverComponent } from './shared/addcaregiver/addcaregiver.compon
 import { LeadlistComponent } from './pages/leadlist/leadlist.component';
 import { AddFacilityComponent } from './admin/add-facility/add-facility.component';
 import { AddPlansComponent } from './admin/add-plans/add-plans.component';
+import { ViewPlansComponent } from './admin/view-plans/view-plans.component';
+
 
 const routes: Routes = [
   { path: '', component: AdminComponent,
@@ -295,6 +297,10 @@ const routes: Routes = [
       {
         path:'add_plans',
         component:AddPlansComponent
+      },
+      {
+        path:'view_plans',
+        component:ViewPlansComponent
       }
     
     ]

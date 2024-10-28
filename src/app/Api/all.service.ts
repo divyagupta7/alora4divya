@@ -318,7 +318,11 @@ public leadData: any;
   }
 
   addPlans(data:any){
-    return this.post(superAdminEndPoints.addPlans, data)
+    return this.post(superAdminEndPoints.Plans, data)
+  }
+
+  deletePlans(id:any){
+    return this.delete(superAdminEndPoints.deletePlans + id)
   }
 
 }
