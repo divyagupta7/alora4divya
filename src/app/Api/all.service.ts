@@ -343,6 +343,13 @@ public leadData: any;
     return this.post(superAdminEndPoints.addFacility, data)
    }
   
-     
+ 
+
+   addDocument(data: any) {
+    const headers = new HttpHeaders({
+    });
+    return this.http.post(superAdminEndPoints.addDocument, data, { headers });
+  }
+
 
 }

@@ -12,6 +12,7 @@ import { ViewPatientDetailsComponent } from './pages/view-patient-details/view-p
 import { NurseAloteViewComponent } from './pages/nurse-alote-view/nurse-alote-view.component';
 import { ViewReportComponent } from './pages/view-report/view-report.component';
 import { AddReportComponent } from './shared/add-report/add-report.component';
+import { DocumentComponent } from './document/document.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AddReportComponent } from './shared/add-report/add-report.component';
     ViewPatientDetailsComponent,
     NurseAloteViewComponent,
     ViewReportComponent,
-    AddReportComponent
+    AddReportComponent,
+    DocumentComponent
   ],
   imports: [
     CommonModule,

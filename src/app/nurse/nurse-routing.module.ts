@@ -9,6 +9,7 @@ import { ViewPatientDetailsComponent } from './pages/view-patient-details/view-p
 import { NurseAloteViewComponent } from './pages/nurse-alote-view/nurse-alote-view.component';
 import { ViewReportComponent } from './pages/view-report/view-report.component';
 import { AddReportComponent } from './shared/add-report/add-report.component';
+import { DocumentComponent } from './document/document.component';
 
 const routes: Routes = [
   { path: '', component: NurseComponent,
@@ -49,6 +50,10 @@ const routes: Routes = [
       {
         path:'add_report',
         component:AddReportComponent
+      },
+      {
+        path:'add_document',
+        component:DocumentComponent
       }
     ]
    }

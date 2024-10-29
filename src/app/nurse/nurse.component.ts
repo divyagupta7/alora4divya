@@ -35,9 +35,10 @@ export class NurseComponent {
 
 
   logouts() {
-    localStorage.removeItem('nurse_token')
-    localStorage.removeItem('nurse_name')
+    localStorage.removeItem('caregiver_token')
+    localStorage.removeItem('caregiver_name')
     localStorage.removeItem('id')
+    localStorage.removeItem('caregiverid')
     this.route.navigateByUrl("/", { replaceUrl: true })
   }
 }

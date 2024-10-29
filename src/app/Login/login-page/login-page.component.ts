@@ -71,7 +71,7 @@ export class LoginPageComponent implements OnInit {
       localStorage.setItem('caregiver_token', res.token);
       localStorage.setItem('id', res.id);
       localStorage.setItem('caregiver_name', res.name);
-      localStorage.setItem('caregiverid', res.doctorId);
+      localStorage.setItem('caregiverid', res.id);
       this.router.navigate(["/nurse/nurse_dashboard"]);
     } else if (res.role === 'patient') {
       localStorage.setItem('patient_token', res.token);

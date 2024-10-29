@@ -33,7 +33,7 @@ export class PatientComponent {
   logouts() {
     localStorage.removeItem('patient_token')
     localStorage.removeItem('patient_name')
-    localStorage.removeItem('id')
+    localStorage.removeItem('patient_id')
     this.route.navigateByUrl("/", { replaceUrl: true })
   }
   
