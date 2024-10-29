@@ -62,6 +62,7 @@ import { ViewPlansComponent } from './admin/view-plans/view-plans.component';
 import { FacilityViewComponent } from './admin/facility-view/facility-view.component';
 import { ViewCategoryComponent } from './admin/view-category/view-category.component';
 import { AddCategoryComponent } from './admin/add-category/add-category.component';
+import { DocumentsComponent } from './documents/documents.component';
 
 
 const routes: Routes = [
@@ -316,6 +317,10 @@ const routes: Routes = [
       {
         path:'add_category',
         component:AddCategoryComponent
+      },
+      {
+        path:'nurse_documents',
+        component:DocumentsComponent
       }
     
     ]

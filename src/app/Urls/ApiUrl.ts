@@ -49,7 +49,10 @@ export const superAdminEndPoints = {
      addFacility: `${baseUrl}facility`,
      addDocument: `${baseUrl}document`,
      getfacilitycategorys: `${baseUrl}facilitycategorys`,
-     addfacilitycategorys: `${baseUrl}facilitycategory`
-
-
+     addfacilitycategorys: `${baseUrl}facilitycategory`,
+     getDocument: `${baseUrl}document/`,
+     getDocumentByNurseId: `${baseUrl}document/active?caregiverId=`,
+     getDocumentByNurseIdArchive: `${baseUrl}document/expire?caregiverId=`,
+     nurseLeads: `${baseUrl}lead/caregiverid/`,
 }
+

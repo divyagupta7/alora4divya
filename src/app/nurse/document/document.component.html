@@ -1,5 +1,5 @@
-
 <div class="container mt-5">
+
     <div class="col-lg-12 col-md-12 text-white gap-2 mt-2" style="background-color: #438EB9; height: 40px;">
         <h5 class="mt-3 p-2">Add Document</h5>
     </div>
@@ -15,9 +15,68 @@
                     <input type="date" class="form-control" formControlName="expiryDate">
                 </div>
                 <div class="col-12 d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary" (click)="addDocument()" >Add Document</button>
+                    <button type="submit" class="btn btn-primary" (click)="addDocument()">Add Document</button>
                 </div>
             </form>
         </div>
     </div>
+
+    
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-5">
+           <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="documentTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="active-tab" data-bs-toggle="tab" data-bs-target="#active" 
+                    type="button" role="tab" aria-controls="active" aria-selected="true">
+                Active Documents
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="archive-tab" data-bs-toggle="tab" data-bs-target="#archive" 
+                    type="button" role="tab" aria-controls="archive" aria-selected="false">
+                Archive Documents
+            </button>
+        </li>
+    </ul>
+
+    <!-- Tab content -->
+    <div class="tab-content" id="documentTabContent">
+        <!-- Active Documents Tab -->
+        <div class="tab-pane fade show active" id="active" role="tabpanel" aria-labelledby="active-tab">
+            <h5>Active Documents</h5>
+            
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Document</th>
+                            <th>Created At</th>
+                            <th>Expiry Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of document">
+                            <td> <img [src]="item.document" alt="Document" style="width: 100px; height: 100px;" class="img-fluid"> </td>
+                            <td>{{item.created_at | date:'dd-MM-yyyy'}}</td>
+                            <td>{{item.expiryDate | date:'dd-MM-yyyy'}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+           
+        </div>
+
+        <!-- Archive Documents Tab -->
+        <div class="tab-pane fade" id="archive" role="tabpanel" aria-labelledby="archive-tab">
+            <!-- Add your archive documents content here -->
+            <div class="mt-3">
+                <h5>Archive Documents</h5>
+                <!-- Add your archive documents list or content here -->
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
 </div>

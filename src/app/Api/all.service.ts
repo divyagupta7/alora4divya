@@ -360,5 +360,18 @@ public leadData: any;
     return this.http.post(superAdminEndPoints.addDocument, data, { headers });
   }
 
+  getDocumentByNurseId() {
+    const nurseId = localStorage.getItem('caregiverid');
+    return this.get(`${superAdminEndPoints.getDocumentByNurseId}${nurseId}`);
+  }
+
+  getNurseDoc(id:any){
+    return this.get(superAdminEndPoints.getDocumentByNurseId + id)
+  }
+
+  getNurseLeads(id:any){
+    const nurseId = localStorage.getItem('caregiverid');
+    return this.get(superAdminEndPoints.nurseLeads + nurseId)
+  }
 
 }

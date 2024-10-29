@@ -65,6 +65,7 @@ import { AddPlansComponent } from './admin/add-plans/add-plans.component';
 import { ViewPlansComponent } from './admin/view-plans/view-plans.component';
 import { AddCategoryComponent } from './admin/add-category/add-category.component';
 import { ViewCategoryComponent } from './admin/view-category/view-category.component';
+import { DocumentsComponent } from './documents/documents.component';
 
 
 @NgModule({
@@ -130,7 +131,8 @@ import { ViewCategoryComponent } from './admin/view-category/view-category.compo
     AddPlansComponent,
     ViewPlansComponent,
     AddCategoryComponent,
-    ViewCategoryComponent
+    ViewCategoryComponent,
+    DocumentsComponent
   ],
   imports: [
     CommonModule,

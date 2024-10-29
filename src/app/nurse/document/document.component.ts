@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AllService } from 'src/app/Api/all.service';
 import { SweetsalertsServicesService } from 'src/app/sweetsalerts-services.service';
@@ -9,7 +9,7 @@ import { SweetsalertsServicesService } from 'src/app/sweetsalerts-services.servi
   templateUrl: './document.component.html',
   styleUrls: ['./document.component.css']
 })
-export class DocumentComponent {
+export class DocumentComponent implements OnInit {
   addDocumentForm:FormGroup;
   userId: any;
 
@@ -20,6 +20,18 @@ export class DocumentComponent {
       document:new FormControl('',Validators.required),
       expiryDate:new FormControl('',Validators.required),
       caregiverId:new FormControl(this.userId),
+    })
+  }
+
+  ngOnInit(): void {
+    this.getDocumentByNurseId();
+  }
+
+  document:any[]=[];
+  getDocumentByNurseId(){
+    this.api.getDocumentByNurseId().subscribe((res:any)=>{
+      console.log(res);
+      this.document=res.data;
     })
   }
 
