@@ -342,6 +342,15 @@ public leadData: any;
   addFacilitys(data:any){
     return this.post(superAdminEndPoints.addFacility, data)
    }
+
+   addfacilitycategorysss(data:any){
+    return this.post(superAdminEndPoints.addfacilitycategorys, data)
+   }
+
+   getfacilitycategorysss(){
+    return this.get(superAdminEndPoints.getfacilitycategorys)
+  }
+
   
  
 

@@ -1,13 +1,11 @@
-<p>view-category works!</p>
-
 <div class="container-fluid  mt-3">
-    <div class="page-title">Facility<span class="sub-title ms-2"> <i class="fa-duotone fa-solid fa-arrows-turn-right"></i>Lead
+    <div class="page-title">Facility Category <span class="sub-title ms-2"> <i class="fa-duotone fa-solid fa-arrows-turn-right"></i>Facility Category
         Search</span></div>
     
         <div class="col-lg-12 col-md-12 d-flex  gap-2  mt-2 "
         style="background-color: #F7F7F7; white-space: wrap ; height: 70px;">
-        <h5 class="fs-4 mt-3 text-center p-2" style="color: #777 ;"> Facility </h5> <span><button type="button"
-                class="btn text-white mt-3" style="background-color: #4F99C6;" routerLink="/Admin/add_facility"><span><i
+        <h5 class="fs-4 mt-3 text-center p-2" style="color: #777 ;">Facility Category</h5> <span><button type="button"
+                class="btn text-white mt-3" style="background-color: #4F99C6;" routerLink="/Admin/add_category"><span><i
                         class="fa-sharp fa-solid fa-plus"></i></span> Add</button></span>
     </div>
 
@@ -38,14 +36,19 @@
         <thead class="" style="font-size: 13px; text-wrap: nowrap; ">
           <tr>
             <th style="color: #4F99C6;">SR NO</th>
-            <th style="color: #4F99C6;">FACILITY NAME</th>
+            <th style="color: #4F99C6;">FACILITY CATEGORY</th>  
+            <th style="color: #4F99C6;">FACILITY ITEM</th>
+
           </tr>
         </thead>
   
         <tbody style="text-wrap: nowrap;" class="">
           <tr style="background-color: #f9f9f9;" *ngFor="let a of filteredleads;   let i = index">
             <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+            <td>ADLS</td>
             <td>{{a.facilityName}}</td>
+            
+
             <!-- <td>
               <div class="pretty p-default p-thick p-pulse" *ngIf="a.leadStatus">
                 <input type="checkbox" [checked]="true" (change)="toggleVerified(a)" />

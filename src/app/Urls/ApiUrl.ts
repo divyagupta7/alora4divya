@@ -48,4 +48,8 @@ export const superAdminEndPoints = {
      getFacility: `${baseUrl}facilitys`,
      addFacility: `${baseUrl}facility`,
      addDocument: `${baseUrl}document`,
+     getfacilitycategorys: `${baseUrl}facilitycategorys`,
+     addfacilitycategorys: `${baseUrl}facilitycategory`
+
+
 }
