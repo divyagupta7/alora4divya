@@ -299,6 +299,10 @@ public leadData: any;
     return this.http.post(superAdminEndPoints.caregivercreate, data, { headers });
   }
 
+  getcaregivers(){
+    return this.get(superAdminEndPoints.caregiverget)
+  }
+
   addPlansss(data: any) {
     const headers = new HttpHeaders({
     });

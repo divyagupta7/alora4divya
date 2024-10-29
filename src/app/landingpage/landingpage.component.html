@@ -95,7 +95,7 @@
 
 
                   <div class="row">
-                     <form [formGroup]="leadform">
+                     <form [formGroup]="leadform" (ngSubmit)="onSubmit()">
 
                         <div class="col-md-12 mb-3">
                            <input type="text" class="form-control" placeholder="Name" formControlName="name">
@@ -108,7 +108,7 @@
                         <div class="col-md-12  mb-3">
                            <select class="form-select" formControlName="servicetype" (change)="onServiceTypeChange()">
                               <option value="">Service Plans</option>
-                              <option value="Caregiver">Caregiver</option>
+                              <!-- <option value="Caregiver">Caregiver</option> -->
                               <option value="Client">Client</option>
                            </select>
                         </div>
@@ -118,8 +118,8 @@
                         </div>
 
                         <div class="col-md-12 text-start ">
-                           <button class="btn" style="background-color: #003366; color: white;"
-                              (click)="onSubmit()">Submit</button>
+                           <button class="btn" type="submit" style="background-color: #003366; color: white;"
+                              >Submit</button>
                         </div>
 
                      </form>
@@ -175,7 +175,7 @@
 <div class="container mt-5"  *ngIf="showClientCards" >
    <div class="row justify-content-center">
        <div class="col-md-4"  *ngFor="let plan of planDetails">
-           <div class="card text-center shadow border-0 rounded-4">
+           <div class="card text-center shadow border-0 rounded-4 mt-2">
                <!-- Image at the top -->
                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuaLIv7_L3eKnRwKSl-bj7nijJGlHIQUYRBA&s" height="100px" class="card-img-top" style="object-fit: contain;" alt="Plan Image">
                <div class="card-body text-center"> <!-- Centering all card content -->
@@ -183,21 +183,28 @@
                      
                    </span>
                    <h5 class="card-title font-weight-bold">{{plan.planName}}</h5>
-                   <h2 class="card-text">$219<span class="text-muted">/mo</span></h2>
+                   <h2 class="card-text">$700<span class="text-muted">/yr</span></h2>
                    
                    <h6 class="card-text">Features</h6>
                    <ul class="list-unstyled mt-2 mb-2">
-                       <li>Donec enim nulla malesuada <i class="fas fa-check-circle text-success"></i></li>
-                       <li>Donec enim nulla malesuada <i class="fa-solid fa-xmark text-danger"></i></li>
+                       <li>ADLS:-Bathing,Dressing,Eating <i class="fas fa-check-circle text-success"></i></li>
+                       <!-- <li>Donec enim nulla malesuada <i class="fa-solid fa-xmark text-danger"></i></li> -->
                    </ul>
        
                    <h6 class="card-text">Facility</h6>
                    <ul class="list-unstyled mt-1 mb-4">
-                       <li>Donec enim nulla malesuada</li>
-                       <li>Donec enim nulla malesuada</li>
+                       <li>Demo facility</li>
+                       <!-- <li>Donec enim nulla malesuada</li> -->
                    </ul>
        
-                   <a style="background-color: #003366; color: white;" class="btn btn-info rounded-pill">Sign Up Today</a>
+                   <!-- <a  [class.selected]="selectedCardId === plan.id" 
+                   (click)="selectCard(plan.id)" style="background-color: #003366; color: white;" class="btn btn-info rounded-pill">Select</a> -->
+                   <button [class.selected]="selectedCardId === plan.id" 
+                   (click)="selectCard(plan.id)" 
+                   style="background-color: #003366; color: white;" 
+                   class="btn btn-info rounded-pill">
+                       {{ selectedCardId === plan.id ? 'Selected' : 'Select' }}
+                   </button>
                </div>
            </div>
        </div>

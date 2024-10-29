@@ -46,3 +46,22 @@
             margin-left: 20px; 
             
         }
+
+.card.selected {
+  border: 2px solid #007bff;
+  /* or whatever styling you prefer for selected cards */
+}
+
+.selected-card {
+    border: 2px solid #003366 !important;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.btn.selected {
+    background-color: #28a745 !important;
+}
+
+.card {
+    transition: all 0.3s ease;
+}

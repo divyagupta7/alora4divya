@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { SweetsalertsServicesService } from '../sweetsalerts-services.service';
 
 interface PlanDetail {
+id: any;
   planName: string;
   facility: string[];
   activePlan: number;
@@ -22,8 +23,9 @@ export class LandingpageComponent implements OnInit {
 
   leadform!: FormGroup;
   showClientCards = false;
-  planDetails: PlanDetail[] = [ ];
-  
+  planDetails: PlanDetail[] = [  ];
+  selectedCardId: number | null = null;
+
   constructor(private fb: FormBuilder,
     private service:AllService,
     private route:Router,
@@ -42,10 +44,7 @@ export class LandingpageComponent implements OnInit {
       name:['',Validators.required]  ,      
       email :['',Validators.required]   ,   
       servicetype :['',Validators.required],
-      note  :['',Validators.required]  ,    
-      personalCare: [false],
-      companionCare: [false],
-      respiteCare: [false]
+      note  :['',Validators.required],
     });
 
     this.getPlans();
@@ -57,18 +56,32 @@ export class LandingpageComponent implements OnInit {
 
   getPlans(){
     this.service.getPlans().subscribe((res:any)=>{
-      this.planDetails = res.data;
       console.log(res)
+      this.planDetails = res.data;
     })
+  }
+
+  selectCard(cardId: number) {
+    this.selectedCardId = cardId;
   }
 
   onSubmit(): void {
     if (this.leadform.valid) {
-      console.log(this.leadform.value);
-      this.service.addlead(this.leadform.value).subscribe((res:any)=>{
+      // Create form data with selected card
+      const formData = {
+        ...this.leadform.value,
+        planId: this.selectedCardId
+      };
+
+      console.log(formData);
+      this.service.addlead(formData).subscribe((res: any) => {
         this.swet.SucessToast(`Generate Lead Successfully`);
-        console.log('form added',res)
-       });
+        console.log('form added', res);
+
+        this.leadform.reset();
+        this.selectedCardId = null;
+        this.showClientCards = false;
+      });
     }
   }
 }

@@ -99,6 +99,7 @@ export class LeadlistComponent {
     this.patientByIdData = res.data[0];
   })
 }
+
 toggleVerified(data: any) {
   var id = data.id;
   this.dataSend = {
